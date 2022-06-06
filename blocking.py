@@ -237,7 +237,7 @@ def slkBlocking(rec_dict, fam_name_attr_ind, giv_name_attr_ind,
         # Add your code here
         # Coding of family name and given name
         if rec_values[fam_name_attr_ind]:
-            fam_name_coding = f"{rec_values[fam_name_attr_ind][1:3]}{rec_values[fam_name_attr_ind][:4][3:]}22"[:3]
+            fam_name_coding = f"{rec_values[fam_name_attr_ind][1:3]}{rec_values[fam_name_attr_ind][:5][4:]}22"[:3]
         else:
             fam_name_coding = "999"
 
