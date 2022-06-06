@@ -176,7 +176,7 @@ Für das Attribut last_name kann lässt sich diese Behauptung allerdings nicht m
      0: rec_id
      1: first_name        - suitable
      2: middle_name       - unsuitable (Higher risk of missing values)
-     3: last_name         - suitable
+     3: last_name         - suitable (lower risk for change over time)
      4: gender            - unsuitable for phonetic
      5: current_age       - unsuitable in general (changes over time)
      6: birth_date        - unsuitable for phonetic
