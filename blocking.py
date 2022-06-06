@@ -142,6 +142,9 @@ def phoneticBlocking(rec_dict, blk_attr_list):
             # *********** Implement Soundex function here *********
 
             # Add your code here
+
+            # NOTE: Compiled regex is at the start of the function
+
             # 1. return 4 0's if value is not empty else
             # This is important for indexing attr_val with index 0 after soundex procedure
             if attr_val == "":
