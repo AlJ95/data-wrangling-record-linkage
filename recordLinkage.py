@@ -26,11 +26,19 @@ import loadDataset
 
 # ******** Uncomment to select a pair of datasets **************
 #
+
+name = "little-dirty"
+# name = "clean"
+
+records = 1000
+# records = 10000
+
+
 # datasetA_name = 'datasets/clean-A-10000.csv'
 # datasetB_name = 'datasets/clean-B-10000.csv'
 
-datasetA_name = 'datasets/little-dirty-A-10000.csv'
-datasetB_name = 'datasets/little-dirty-B-10000.csv'
+datasetA_name = f'datasets/{name}-A-{records}.csv'
+datasetB_name = f'datasets/{name}-B-{records}.csv'
 
 headerA_line = True  # Dataset A header line available - True or Flase
 headerB_line = True  # Dataset B header line available - True or Flase
@@ -39,9 +47,9 @@ headerB_line = True  # Dataset B header line available - True or Flase
 
 # ***** Uncomment a file name corresponding to your selected datasets *******
 
-truthfile_name = 'datasets/clean-true-matches-1000.csv'
+# truthfile_name = 'datasets/clean-true-matches-1000.csv'
 
-# truthfile_name = 'datasets/little-dirty-true-matches-10000.csv'
+truthfile_name = f'datasets/{name}-true-matches-{records}.csv'
 
 # The two attribute numbers that contain the record identifiers
 #
@@ -74,8 +82,8 @@ attrB_list = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
 # The list of attributes to use for blocking (all must occur in the above
 # attribute lists)
 #
-blocking_attrA_list = [1]
-blocking_attrB_list = [1]
+blocking_attrA_list = [1, 4]
+blocking_attrB_list = [1, 4]
 
 # ******** In lab 4, explore different comparison functions for different  ****
 # ********           attributes                                            ****
