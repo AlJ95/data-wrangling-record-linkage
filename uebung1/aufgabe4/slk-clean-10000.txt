@@ -1,0 +1,78 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+Load data set from file: datasets/clean-A-10000.csv
+  Header line: ['rec_id', 'first_name', 'middle_name', 'last_name', 'gender', 'current_age', 'birth_date', 'street_address', 'suburb', 'postcode', 'state', 'phone', 'email']
+  Record identifier attribute: rec_id
+  Attributes to use:
+    first_name
+    middle_name
+    last_name
+    gender
+    birth_date
+    street_address
+    suburb
+    postcode
+    state
+    phone
+
+Load data set from file: datasets/clean-B-10000.csv
+  Header line: ['rec_id', 'first_name', 'middle_name', 'last_name', 'gender', 'current_age', 'birth_date', 'street_address', 'suburb', 'postcode', 'state', 'phone', 'email']
+  Record identifier attribute: rec_id
+  Attributes to use:
+    first_name
+    middle_name
+    last_name
+    gender
+    birth_date
+    street_address
+    suburb
+    postcode
+    state
+    phone
+
+Load truth data from file: datasets/clean-true-matches-1000.csv
+  Loaded 500 true matching record pairs
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 10000
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 10000
+
+Statistics of the generated blocks:
+Dataset A number of blocks generated: 9999
+    Minimum block size: 1
+    Average block size: 1.00
+    Maximum block size: 2
+
+Dataset B number of blocks generated: 9999
+    Minimum block size: 1
+    Average block size: 1.00
+    Maximum block size: 2
+
+Compare 9999 blocks from dataset A with 9999 blocks from dataset B
+  Compared 5002 record pairs
+
+Exact classification of 5002 record pairs
+  Classified 4955 record pairs as matches and 47 as non-matches
+
+Blocking evaluation:
+  Reduction ratio:    1.000
+  Pairs completeness: 0.000
+  Pairs quality:      0.000
+
+Calculating confusion matrix using 4955 classified matches, 47 classified non-matches, and 500 true matches
+  TP=0, FP=4955, FN=500, TN=99994545
+
+Linkage evaluation:
+  Accuracy:    1.000
+  Precision:   0.000
+  Recall:      0.000
+  F-measure:   0.000
+
+Total runtime required for linkage: 0.139 sec
+Loading Time:		 0.091 sec
+Blocking Time:		 0.025 sec
+Comparison Time:	 0.021 sec
+Linkage Time:		 0.139 sec
+
+Process finished with exit code 0

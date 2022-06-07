@@ -1,0 +1,78 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+Load data set from file: datasets/clean-A-1000.csv
+  Header line: ['rec_id', 'first_name', 'middle_name', 'last_name', 'gender', 'current_age', 'birth_date', 'street_address', 'suburb', 'postcode', 'state', 'phone', 'email']
+  Record identifier attribute: rec_id
+  Attributes to use:
+    first_name
+    middle_name
+    last_name
+    gender
+    birth_date
+    street_address
+    suburb
+    postcode
+    state
+    phone
+
+Load data set from file: datasets/clean-B-1000.csv
+  Header line: ['rec_id', 'first_name', 'middle_name', 'last_name', 'gender', 'current_age', 'birth_date', 'street_address', 'suburb', 'postcode', 'state', 'phone', 'email']
+  Record identifier attribute: rec_id
+  Attributes to use:
+    first_name
+    middle_name
+    last_name
+    gender
+    birth_date
+    street_address
+    suburb
+    postcode
+    state
+    phone
+
+Load truth data from file: datasets/clean-true-matches-1000.csv
+  Loaded 500 true matching record pairs
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 1000
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 1000
+
+Statistics of the generated blocks:
+Dataset A number of blocks generated: 1000
+    Minimum block size: 1
+    Average block size: 1.00
+    Maximum block size: 1
+
+Dataset B number of blocks generated: 1000
+    Minimum block size: 1
+    Average block size: 1.00
+    Maximum block size: 1
+
+Compare 1000 blocks from dataset A with 1000 blocks from dataset B
+  Compared 500 record pairs
+
+Exact classification of 500 record pairs
+  Classified 496 record pairs as matches and 4 as non-matches
+
+Blocking evaluation:
+  Reduction ratio:    1.000
+  Pairs completeness: 0.000
+  Pairs quality:      0.000
+
+Calculating confusion matrix using 496 classified matches, 4 classified non-matches, and 500 true matches
+  TP=496, FP=0, FN=4, TN=999500
+
+Linkage evaluation:
+  Accuracy:    1.000
+  Precision:   0.000
+  Recall:      0.000
+  F-measure:   0.000
+
+Total runtime required for linkage: 0.023 sec
+Loading Time:		 0.009 sec
+Blocking Time:		 0.003 sec
+Comparison Time:	 0.011 sec
+Linkage Time:		 0.023 sec
+
+Process finished with exit code 0

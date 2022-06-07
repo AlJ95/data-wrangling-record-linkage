@@ -1,0 +1,80 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+Load data set from file: datasets/clean-A-1000.csv
+  Header line: ['rec_id', 'first_name', 'middle_name', 'last_name', 'gender', 'current_age', 'birth_date', 'street_address', 'suburb', 'postcode', 'state', 'phone', 'email']
+  Record identifier attribute: rec_id
+  Attributes to use:
+    first_name
+    middle_name
+    last_name
+    gender
+    birth_date
+    street_address
+    suburb
+    postcode
+    state
+    phone
+
+Load data set from file: datasets/clean-B-1000.csv
+  Header line: ['rec_id', 'first_name', 'middle_name', 'last_name', 'gender', 'current_age', 'birth_date', 'street_address', 'suburb', 'postcode', 'state', 'phone', 'email']
+  Record identifier attribute: rec_id
+  Attributes to use:
+    first_name
+    middle_name
+    last_name
+    gender
+    birth_date
+    street_address
+    suburb
+    postcode
+    state
+    phone
+
+Load truth data from file: datasets/clean-true-matches-1000.csv
+  Loaded 500 true matching record pairs
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Statistics of the generated blocks:
+Dataset A number of blocks generated: 346
+    Minimum block size: 1
+    Average block size: 2.89
+    Maximum block size: 37
+
+Dataset B number of blocks generated: 346
+    Minimum block size: 1
+    Average block size: 2.89
+    Maximum block size: 29
+
+Compare 346 blocks from dataset A with 346 blocks from dataset B
+  Compared 7232 record pairs
+
+Exact classification of 7232 record pairs
+  Classified 496 record pairs as matches and 6736 as non-matches
+
+Blocking evaluation:
+  Reduction ratio:    0.993
+  Pairs completeness: 0.000
+  Pairs quality:      0.000
+
+Calculating confusion matrix using 496 classified matches, 6736 classified non-matches, and 500 true matches
+  TP=496, FP=0, FN=4, TN=999500
+
+Linkage evaluation:
+  Accuracy:    1.000
+  Precision:   0.000
+  Recall:      0.000
+  F-measure:   0.000
+
+Total runtime required for linkage: 0.088 sec
+Loading Time:		 0.009 sec
+Blocking Time:		 0.006 sec
+Comparison Time:	 0.071 sec
+Linkage Time:		 0.088 sec
+
+Process finished with exit code 0
