@@ -25,12 +25,12 @@ import loadDataset
 # Variable names for loading datasets
 
 # ******** Uncomment to select a pair of datasets **************
+#
+# datasetA_name = 'datasets/clean-A-10000.csv'
+# datasetB_name = 'datasets/clean-B-10000.csv'
 
-datasetA_name = 'datasets/clean-A-1000.csv'
-datasetB_name = 'datasets/little-dirty-A-1000.csv'
-
-# datasetA_name = 'datasets/little-dirty-A-10000.csv'
-# datasetB_name = 'datasets/little-dirty-B-10000.csv'
+datasetA_name = 'datasets/little-dirty-A-10000.csv'
+datasetB_name = 'datasets/little-dirty-B-10000.csv'
 
 headerA_line = True  # Dataset A header line available - True or Flase
 headerB_line = True  # Dataset B header line available - True or Flase
@@ -74,8 +74,8 @@ attrB_list = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
 # The list of attributes to use for blocking (all must occur in the above
 # attribute lists)
 #
-blocking_attrA_list = [3, 4]
-blocking_attrB_list = [3, 4]
+blocking_attrA_list = [1]
+blocking_attrB_list = [1]
 
 # ******** In lab 4, explore different comparison functions for different  ****
 # ********           attributes                                            ****
@@ -129,13 +129,13 @@ start_time = time.time()
 
 # Simple attribute-based blocking
 #
-blockA_dict = blocking.simpleBlocking(recA_dict, blocking_attrA_list)
-blockB_dict = blocking.simpleBlocking(recB_dict, blocking_attrB_list)
+# blockA_dict = blocking.simpleBlocking(recA_dict, blocking_attrA_list)
+# blockB_dict = blocking.simpleBlocking(recB_dict, blocking_attrB_list)
 
 # Phonetic (Soundex) based blocking
 #
-# blockA_dict = blocking.phoneticBlocking(recA_dict, blocking_attrA_list)
-# blockB_dict = blocking.phoneticBlocking(recB_dict, blocking_attrB_list)
+blockA_dict = blocking.phoneticBlocking(recA_dict, blocking_attrA_list)
+blockB_dict = blocking.phoneticBlocking(recB_dict, blocking_attrB_list)
 
 # Statistical linkage key (SLK-581) based blocking
 #
@@ -264,7 +264,10 @@ print('')
 linkage_time = loading_time + blocking_time + comparison_time + \
                classification_time
 print('Total runtime required for linkage: %.3f sec' % linkage_time)
-
+print('Loading Time:\t\t %.3f sec' % loading_time)
+print('Blocking Time:\t\t %.3f sec' % blocking_time)
+print('Comparison Time:\t %.3f sec' % comparison_time)
+print('Linkage Time:\t\t %.3f sec' % linkage_time)
 # -----------------------------------------------------------------------------
 
 # End of program.
