@@ -29,7 +29,7 @@ Load data set from file: datasets/little-dirty-B-1000.csv
     state
     phone
 
-Load truth data from file: datasets/clean-true-matches-1000.csv
+Load truth data from file: datasets/little-dirty-true-matches-1000.csv
   Loaded 500 true matching record pairs
 
 Run SLK-581 blocking:
@@ -61,18 +61,18 @@ Blocking evaluation:
   Pairs quality:      0.000
 
 Calculating confusion matrix using 399 classified matches, 1 classified non-matches, and 500 true matches
-  TP=0, FP=399, FN=500, TN=999101
+  TP=399, FP=0, FN=101, TN=999500
 
 Linkage evaluation:
-  Accuracy:    0.999
+  Accuracy:    1.000
   Precision:   0.000
   Recall:      0.000
   F-measure:   0.000
 
-Total runtime required for linkage: 0.013 sec
+Total runtime required for linkage: 0.012 sec
 Loading Time:		 0.008 sec
 Blocking Time:		 0.003 sec
-Comparison Time:	 0.002 sec
-Linkage Time:		 0.013 sec
+Comparison Time:	 0.001 sec
+Linkage Time:		 0.012 sec
 
 Process finished with exit code 0

@@ -29,8 +29,8 @@ Load data set from file: datasets/clean-B-10000.csv
     state
     phone
 
-Load truth data from file: datasets/clean-true-matches-1000.csv
-  Loaded 500 true matching record pairs
+Load truth data from file: datasets/clean-true-matches-10000.csv
+  Loaded 5000 true matching record pairs
 
 Run phonetic blocking:
   List of blocking key attributes: [1, 4]
@@ -62,8 +62,8 @@ Blocking evaluation:
   Pairs completeness: 0.000
   Pairs quality:      0.000
 
-Calculating confusion matrix using 4955 classified matches, 484612 classified non-matches, and 500 true matches
-  TP=0, FP=4955, FN=500, TN=99994545
+Calculating confusion matrix using 4955 classified matches, 484612 classified non-matches, and 5000 true matches
+  TP=4955, FP=0, FN=45, TN=99995000
 
 Linkage evaluation:
   Accuracy:    1.000
@@ -71,10 +71,10 @@ Linkage evaluation:
   Recall:      0.000
   F-measure:   0.000
 
-Total runtime required for linkage: 5.222 sec
-Loading Time:		 0.093 sec
-Blocking Time:		 0.079 sec
-Comparison Time:	 4.911 sec
-Linkage Time:		 5.222 sec
+Total runtime required for linkage: 5.326 sec
+Loading Time:		 0.163 sec
+Blocking Time:		 0.083 sec
+Comparison Time:	 4.936 sec
+Linkage Time:		 5.326 sec
 
 Process finished with exit code 0
