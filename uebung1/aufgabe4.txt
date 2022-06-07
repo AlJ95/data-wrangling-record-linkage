@@ -1,0 +1,138 @@
+Aufgabe 4
+
+Soundex
+
+    Vergleich der Ergebnisse mit Blockattributen [1] vs [1, 4]
+
+    Das Geschlecht miteinzubeziehen macht nicht nur im Simple Blocking Sinn.
+    Auch beim phonetischen Blocking konnten die durschnittlichen Blockgrößen verkleinert werden, sodass die Laufzeit verringert werden konnte:
+
+    Laufzeit & Evaluierung:
+
+        Clean:
+            clean-1000-14: (10,000 in Klammern)
+                Total runtime required for linkage: 0.076 sec   (5.326 sec)
+                Loading Time:		 0.009 sec                  (0.163 sec)
+                Blocking Time:		 0.008 sec                  (0.083 sec)
+                Comparison Time:	 0.057 sec                  (4.936 sec)
+
+                A: Min, Avg, Max Blocksize: 1, 2.47, 27         (1, 8.45, 217)
+                B: Min, Avg, Max Blocksize: 1, 2.46, 24         (1, 8.57, 210)
+
+                Blocking-Keys shared by both: 305               (969)
+                Blocking-Keys in A, but not in B: 100           (214)
+                Blocking-Keys in B, but not in A: 101           (198)
+
+            clean-1000-1: (10,000 in Klammern)
+                Total runtime required for linkage: 0.088 sec   (7.081 sec)
+                Loading Time:		 0.009 sec                  (0.098 sec)
+                Blocking Time:		 0.006 sec                  (0.056 sec)
+                Comparison Time:	 0.071 sec                  (6.721 sec)
+
+                A: Min, Avg, Max Blocksize: 1, 2.89, 37         (1, 11.11, 322)
+                B: Min, Avg, Max Blocksize: 1, 2.89, 29         (1, 11.27, 312)
+
+                Blocking-Keys shared by both: 270               (758)
+                Blocking-Keys in A, but not in B: 76            (142)
+                Blocking-Keys in B, but not in A: 76            (129)
+
+        Die Confusion Matrix:
+            TP=496, FP=0, FN=4, TN=999500 (TP=4955, FP=0, FN=45, TN=99995000)
+        ist für die Durchläufe des Verfahrens mit den beiden Attributmengen gleich, sodass sich hier zeigt, dass das Gender für diesen Datensatz eine Verbesserung darstellt.
+
+        Little-Dirty:
+            little-dirty-1000-14: (10,000 in Klammern)
+                Total runtime required for linkage: 0.055 sec   (3.128 sec)
+                Loading Time:		 0.009 sec                  (0.096 sec)
+                Blocking Time:		 0.008 sec                  (0.078 sec)
+                Comparison Time:	 0.037 sec                  (2.875 sec)
+
+                A: Min, Avg, Max Blocksize: 1, 2.15, 18         (1, 5.59, 194)
+                B: Min, Avg, Max Blocksize: 1, 1.67, 15         (1, 4.07, 134)
+
+                Blocking-Keys shared by both: 351               (1520)
+                Blocking-Keys in A, but not in B: 114           (269)
+                Blocking-Keys in B, but not in A: 247           (937)
+
+            little-dirty-1000-1: (10,000 in Klammern)
+                Total runtime required for linkage: 0.143 sec   (4.253 sec)
+                Loading Time:		 0.075 sec                  (0.096 sec)
+                Blocking Time:		 0.011 sec                  (0.056 sec)
+                Comparison Time:	 0.056 sec                  (3.990 sec)
+
+                A: Min, Avg, Max Blocksize: 1, 2.49, 25         (1, 7.21, 271)
+                B: Min, Avg, Max Blocksize: 1, 1.95, 18         (1, 5.27, 203)
+
+                Blocking-Keys shared by both: 314               (1218)
+                Blocking-Keys in A, but not in B: 87            (169)
+                Blocking-Keys in B, but not in A: 200           (681)
+
+        Auch hier ist die Confusion Matrix:
+            TP=399, FP=0, FN=101, TN=999500 (TP=3944, FP=0, FN=1056, TN=99995000)
+        für die Durchläufe des Verfahrens mit den beiden Attributmengen gleich, sodass sich hier erneut zeigt,
+        dass das Hinzufügen des Genders zu den relevanten Blockattributen eine Verbesserung darstellt.
+
+SLK581:
+
+    Der SLK581 Algorithmus liefert
+
+    Laufzeit & Evaluierung:
+
+        Clean: (10,000 in Klammern)
+            Total runtime required for linkage: 0.023 sec   (0.141 sec)
+            Loading Time:		 0.009 sec                  (0.098 sec)
+            Blocking Time:		 0.003 sec                  (0.023 sec)
+            Comparison Time:	 0.011 sec                  (0.018 sec)
+
+        TP=496, FP=0, FN=4, TN=999500 (TP=4955, FP=0, FN=45, TN=99995000)
+
+        A: Min, Avg, Max Blocksize: 1, 1.00, 1          (1, 1.00, 2)
+        B: Min, Avg, Max Blocksize: 1, 1.00, 1          (1, 1.00, 2)
+
+        Blocking-Keys shared by both: 500               (4999)
+        Blocking-Keys in A, but not in B: 500           (5000)
+        Blocking-Keys in B, but not in A: 500           (5000)
+
+
+        Little-Dirty: (10,000 in Klammern)
+            Total runtime required for linkage: 0.012 sec   (0.131 sec)
+            Loading Time:		 0.008 sec                  (0.093 sec)
+            Blocking Time:		 0.003 sec                  (0.023 sec)
+            Comparison Time:	 0.001 sec                  (0.014 sec)
+
+        TP=399, FP=0, FN=101, TN=999500 (TP=3944, FP=0, FN=1056, TN=99995000)
+
+        A: Min, Avg, Max Blocksize: 1, 1.00, 1          (1, 1.00, 2)
+        B: Min, Avg, Max Blocksize: 1, 1.00, 1          (1, 1.00, 1)
+
+        Blocking-Keys shared by both: 400               (4000)
+        Blocking-Keys in A, but not in B: 600           (5999)
+        Blocking-Keys in B, but not in A: 600           (6000)
+
+Beantwortung der Fragen:
+
+    Im Folgenden wurde der Recall einbezogen, da dieser sich auch durch das Blocking ändern kann. Falsche Matches führen
+    dazu, dass True-Matches nicht gefunden werden können, bzw. unnötige Vergleiche durchgeführt werden.
+
+    Mit einem Recall von 99,2% (99,1%) für clean-1000 (10000) bzw.
+    einem Recall von 79,8% (78,9%) für little-dirty-1000 (10000) haben beide Algorithmen gleich gut performed.
+    Dadurch ist es möglich, dass das Blocking perfekt Resultate liefert und die FN im späteren Verlauf des Programmes entstehen.
+
+    Daher wird jetzt nur auf Laufzeit & Anzahl der Blocking-Keys geachtet:
+
+     - Für die vorliegenden Daten würde ich den SLK581 wählen.
+        Die Laufzeit verhielt sich linear zu der Anzahl der records.
+
+        Das liegt vor allem daran, dass die Blockgrößen nahezu alle die Größe 1 haben, und somit wie bereits in der Vorlesung beschrieben auch direkt eine Ähnlichkeitsfunktion, denn Blockgrößen größer als 1 werden als Duplikate angesehen.
+        Daraus resultiert eine sehr geringe Anzahl von Vergleichen. Da die Ergebnisse in Relation zum Soundex Algorithmus den gleichen Recallwert besitzen, muss vorerst davon ausgegangen werden, dass der SLK581 gleich gut performed, aber eine erhebliche Laufzeitverbesserung darstellt.
+
+        Das gilt auch für die Daten vom little-dirty Datensatz 1000 (10000). Diese waren sauber genug, sodass auch hier der SLK581 bevorzugt werden sollte.
+
+     - Attribute, die nur wenige Werte annehmen können, wie State, Gender, suburb aber auch streetnames sind isoliert nicht geeignet. In meinen Blockingversuchen hat sich allerdings eine Laufzeitverbesserung ergeben, nachdem ich zusätzlich zum firstname das Gender mitbenutzt habe (bzgl. Soundex). Der first_name hat solide Ergebnisse erzielt, allerdings konnten mit dem zusätzlichen Attribut Gender weitere False-Matches ausgeschlossen werden, die dann nicht mehr miteinander verglichen werden mussten.
+
+      - Ein guter Blocking-Key sollte folgende Eigenschaften besitzen:
+        - Das Attribut sollte sich möglichst selten ändern. Dies ist aus den Daten schwer herauszulesen. Allerdings wäre eine Telefonnummer, die E-Mail oder die Straße eine schlechte Wahl für Daten, die in einem langen Zeitraum erfasst wurden.
+        - Der Blocking-Key sollte eine ausreichend große Grundmenge besitzen. Wie in den Soundex Ergebnissen zu sehen ist, liefert der Algorithmus den gleichen Recallwert unabhängig davon, ob nur der Vorname oder der Vorname zusammen mit dem Gender gewählt wurde. Allerdings ist die durchschnittliche Blockgröße mit dem Zusammenschluss von Vornamen und Gender kleiner. Geteilte Soundex-Codes von Vornamen waren nach Angabe des Genders damit keine Matches mehr.
+
+
+
