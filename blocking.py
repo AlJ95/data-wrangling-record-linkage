@@ -321,6 +321,12 @@ def printBlockStatistics(blockA_dict, blockB_dict):
     print('    Maximum block size: %d' % (max(block_sizeB_list)))
     print('')
 
+    print(
+        f"Blocking-Keys shared by both: {len([key for key in blockA_dict if key in blockB_dict])}\n"
+        f"Blocking-Keys in A, but not in B: {len([key for key in blockA_dict if key not in blockB_dict])}\n"
+        f"Blocking-Keys in B, but not in A: {len([key for key in blockB_dict if key not in blockA_dict])}\n"
+    )
+
 # -----------------------------------------------------------------------------
 
 # End of program.
