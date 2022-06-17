@@ -1,0 +1,17 @@
+a)
+jones / johnson jacc_sim: 0.25
+michelle / michael jacc_sim: 0.4444444444444444
+shackleford / shackelford jacc_sim: 0.5384615384615384
+jan / naj jacc_sim: 0.0
+
+b)
+jones / johnson dice_sim: 0.4
+michelle / michael dice_sim: 0.6153846153846154
+shackleford / shackelford dice_sim: 0.70
+jan / naj dice_sim: 0.0
+
+c)
+jones / johnson jaro_winkler_sim: 0.8323809523809523
+michelle / michael jaro_winkler_sim: 0.9214285714285715
+shackleford / shackelford jaro_winkler_sim: 0.9818181818181818
+jan / naj jaro_winkler_sim: 0.5555555555555555
