@@ -46,9 +46,11 @@ def jaccard_comp(val1, val2):
 
     # ********* Implement Jaccard similarity function here *********
 
+    # Using sets for unique Q-Grams of length 2
     q_gram1 = set(val1[i:i + 2] for i in range(len(val1)-1))
     q_gram2 = set(val2[i:i + 2] for i in range(len(val2)-1))
 
+    # Calculate cardinality of its intersection divided by the cardinality of its union
     jacc_sim = len(q_gram1.intersection(q_gram2)) / len(q_gram1.union(q_gram2))
 
     # ************ End of your Jaccard code *************************************
@@ -78,10 +80,11 @@ def dice_comp(val1, val2):
         return 1.0
 
     # ********* Implement Dice similarity function here *********
-
+    # Using sets for unique Q-Grams of length 2
     q_gram1 = set(val1[i:i + 2] for i in range(len(val1)-1))
     q_gram2 = set(val2[i:i + 2] for i in range(len(val2)-1))
 
+    # Calculate cardinality of its intersection divided by the sum of cardinalities of the sets
     dice_sim = 2 * len(q_gram1.intersection(q_gram2)) / (len(q_gram1) + len(q_gram2))
 
     # ************ End of your Dice code ****************************************
@@ -210,7 +213,10 @@ def jaro_winkler_comp(val1, val2):
 
     # ********* Implement Winkler similarity function here *********
 
+    # Extract prefix of both strings
     prefix = [val1[i] for i in range(len(val1)) if val1[:i+1] == val2[:i+1]]
+
+    # Calculate final formula
     jw_sim = jaro_sim + 0.1 * min(4, len(prefix)) * (1 - jaro_sim)
 
     # Add your code here
@@ -246,12 +252,23 @@ def bag_dist_sim_comp(val1, val2):
     # ********* Implement bag similarity function here *********
     # Extra task only
 
-    bag1, bag2 = list(val1), list(val2)
-    bag_diff1 = [bag1.remove(x) for x in bag2 if x in bag1]
+    # Create multi-sets as lists
+    bag_diff1, bag2 = list(val1), list(val2)
 
-    bag1, bag2 = list(val1), list(val2)
-    bag_diff2 = [bag2.remove(x) for x in bag1 if x in bag2]
+    # remove all items in bag1 that are also in bag2
+    for x in bag2:
+        if x in bag_diff1:
+            bag_diff1.remove(x)
 
+    # Create multi-sets as lists
+    bag1, bag_diff2 = list(val1), list(val2)
+
+    # remove all items in bag2 that are also in bag1
+    for x in bag1:
+        if x in bag_diff2:
+            bag_diff2.remove(x)
+
+    # Calculate final formula
     bag_sim = 1 - max(len(bag_diff1), len(bag_diff2)) / max(len(val1), len(val2))
 
     # Add your code here
