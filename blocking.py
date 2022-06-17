@@ -246,11 +246,13 @@ def slkBlocking(rec_dict, fam_name_attr_ind, giv_name_attr_ind,
         else:
             given_name_coding = "99"
 
-        # Could not find a replacement for missing values
+        # There is no replacement for missing dates
+        # Transform dates into required format
         dd, mm, yyyy = rec_values[dob_attr_ind].split('/')
         dd = f"0{dd}" if len(dd) == 1 else dd
         mm = f"0{mm}" if len(mm) == 1 else mm
 
+        # Coding of gender
         if rec_values[gender_attr_ind] == "m":
             gender_coding = "1"
         elif rec_values[gender_attr_ind] == "w":

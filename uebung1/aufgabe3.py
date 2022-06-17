@@ -81,8 +81,7 @@ Exercise 3 a)
         Maximum block size: 1
 
 
-Der Algorithmus hat nur Blöcke gebildet, welche die Größe 1 haben, was ein recht ernüchterndes Ergebnis ist, da wir 
-die Performance damit nicht verbessern konnten. 
+Der Algorithmus hat nur Blöcke gebildet, welche die Größe 1 haben. 
 Das kann verschiedene Ursachen haben: 
 
 1) Wie bereits in der Vorlesung erwähnt, eignet sich der SLK Blocking Algorithmus nur für wirklich saubere Daten. 

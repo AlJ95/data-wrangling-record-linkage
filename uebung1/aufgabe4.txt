@@ -4,9 +4,6 @@ Soundex
 
     Vergleich der Ergebnisse mit Blockattributen [1] vs [1, 4]
 
-    Das Geschlecht miteinzubeziehen macht nicht nur im Simple Blocking Sinn.
-    Auch beim phonetischen Blocking konnten die durschnittlichen Blockgrößen verkleinert werden, sodass die Laufzeit verringert werden konnte:
-
     Laufzeit & Evaluierung:
 
         Clean:
@@ -111,13 +108,7 @@ SLK581:
 
 Beantwortung der Fragen:
 
-    Im Folgenden wurde der Recall einbezogen, da dieser sich auch durch das Blocking ändern kann. Falsche Matches führen
-    dazu, dass True-Matches nicht gefunden werden können, bzw. unnötige Vergleiche durchgeführt werden.
-
-    Mit einem Recall von 99,2% (99,1%) für clean-1000 (10000) bzw.
-    einem Recall von 79,8% (78,9%) für little-dirty-1000 (10000) haben beide Algorithmen gleich gut performed.
-    Dadurch ist es möglich, dass das Blocking perfekt Resultate liefert und die FN im späteren Verlauf des Programmes entstehen.
-
+    Beide Algorithmen bzgl. des Recalls gleich gut performed.
     Daher wird jetzt nur auf Laufzeit & Anzahl der Blocking-Keys geachtet:
 
      - Für die vorliegenden Daten würde ich den SLK581 wählen.

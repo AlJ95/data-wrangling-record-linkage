@@ -82,8 +82,14 @@ attrB_list = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
 # The list of attributes to use for blocking (all must occur in the above
 # attribute lists)
 #
-blocking_attrA_list = [1, 4]
-blocking_attrB_list = [1, 4]
+# blocking_attrA_list = [1, 4]
+# blocking_attrB_list = [1, 4]
+
+blocking_attrA_list = [3, 4]
+blocking_attrB_list = [3, 4]
+
+# blocking_attrA_list = [1, 2]
+# blocking_attrB_list = [1, 2]
 
 # ******** In lab 4, explore different comparison functions for different  ****
 # ********           attributes                                            ****
@@ -162,7 +168,7 @@ gender_attr_ind = 4
 blocking_time = time.time() - start_time
 
 # Print blocking statistics
-#
+
 blocking.printBlockStatistics(blockA_dict, blockB_dict)
 
 # -----------------------------------------------------------------------------

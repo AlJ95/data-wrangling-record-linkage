@@ -27,8 +27,8 @@ if __name__ == "__main__":
     printBlockStatistics(blockA_dict, blockB_dict)
     print("---")
 
-    blocking_attrA_list = [3]
-    blocking_attrB_list = [3]
+    blocking_attrA_list = [3,4]
+    blocking_attrB_list = [3,4]
     blockA_dict = phoneticBlocking(recA_dict, blocking_attrA_list)
     blockB_dict = phoneticBlocking(recB_dict, blocking_attrB_list)
 
@@ -48,8 +48,8 @@ if __name__ == "__main__":
     printBlockStatistics(blockA_dict, blockB_dict)
     print("---")
 
-    blocking_attrA_list = [1]
-    blocking_attrB_list = [1]
+    blocking_attrA_list = [1,4]
+    blocking_attrB_list = [1,4]
     blockA_dict = phoneticBlocking(recA_dict, blocking_attrA_list)
     blockB_dict = phoneticBlocking(recB_dict, blocking_attrB_list)
 
@@ -115,30 +115,30 @@ first_name + gender wäre meiner Meinung nach zu präferieren.
                                 
 Erklärung: Attribute last_name und first_name wurden ausgewählt. Die Gründe werden weiter unten in 2c) beschrieben. 
 
-    Based on last_name
+    Based on last_name & Gender
     
-Dataset clean-A-1000.csv number of blocks generated: 550
+Dataset clean-A-1000.csv number of blocks generated: 685
     Minimum block size: 1
-    Average block size: 1.82
-    Maximum block size: 12
+    Average block size: 1.46
+    Maximum block size: 7
 
-Dataset little-dirty-A-1000.csv number of blocks generated: 607
+Dataset little-dirty-A-1000.csv number of blocks generated: 722
     Minimum block size: 1
-    Average block size: 1.65
-    Maximum block size: 17
+    Average block size: 1.39
+    Maximum block size: 11
 
 
-    Based on first_name
+    Based on first_name & Gender
 
-Dataset clean-A-1000.csv number of blocks generated: 346
+Dataset clean-A-1000.csv number of blocks generated: 405
     Minimum block size: 1
-    Average block size: 2.89
-    Maximum block size: 37
+    Average block size: 2.47
+    Maximum block size: 27
 
-Dataset little-dirty-A-1000.csv number of blocks generated: 401
+Dataset little-dirty-A-1000.csv number of blocks generated:  465
     Minimum block size: 1
-    Average block size: 2.49
-    Maximum block size: 25
+    Average block size: 2.15
+    Maximum block size: 18
 
 Auswertung:
 Die durchschnittlichen Blockgrößen sind größer als die Blockgrößen mit SimpleBlocking. 
@@ -171,7 +171,7 @@ können, als mit dem einfachen Blockverfahren.
 Für das Attribut last_name kann lässt sich diese Behauptung allerdings nicht mit den Daten belegen.
 
 
-2c)
+2c) Eher schon 4)
     Suitability for Phonetic Blocking
      0: rec_id
      1: first_name        - suitable
