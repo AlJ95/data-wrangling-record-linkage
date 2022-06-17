@@ -46,9 +46,10 @@ def jaccard_comp(val1, val2):
 
     # ********* Implement Jaccard similarity function here *********
 
-    jacc_sim = 0.0  # Replace with your code
+    q_gram1 = set(val1[i:i + 2] for i in range(len(val1)-1))
+    q_gram2 = set(val2[i:i + 2] for i in range(len(val2)-1))
 
-    # Add your code here
+    jacc_sim = len(q_gram1.intersection(q_gram2)) / len(q_gram1.union(q_gram2))
 
     # ************ End of your Jaccard code *************************************
 
@@ -78,9 +79,10 @@ def dice_comp(val1, val2):
 
     # ********* Implement Dice similarity function here *********
 
-    dice_sim = 0.0  # Replace with your code
+    q_gram1 = set(val1[i:i + 2] for i in range(len(val1)-1))
+    q_gram2 = set(val2[i:i + 2] for i in range(len(val2)-1))
 
-    # Add your code here
+    dice_sim = 2 * len(q_gram1.intersection(q_gram2)) / (len(q_gram1) + len(q_gram2))
 
     # ************ End of your Dice code ****************************************
 
@@ -208,7 +210,8 @@ def jaro_winkler_comp(val1, val2):
 
     # ********* Implement Winkler similarity function here *********
 
-    jw_sim = jaro_sim  # Replace with your code
+    prefix = [val1[i] for i in range(len(val1)) if val1[:i+1] == val2[:i+1]]
+    jw_sim = jaro_sim + 0.1 * min(4, len(prefix)) * (1 - jaro_sim)
 
     # Add your code here
 
@@ -243,7 +246,13 @@ def bag_dist_sim_comp(val1, val2):
     # ********* Implement bag similarity function here *********
     # Extra task only
 
-    bag_sim = 0.0  # Replace with your code
+    bag1, bag2 = list(val1), list(val2)
+    bag_diff1 = [bag1.remove(x) for x in bag2 if x in bag1]
+
+    bag1, bag2 = list(val1), list(val2)
+    bag_diff2 = [bag2.remove(x) for x in bag1 if x in bag2]
+
+    bag_sim = 1 - max(len(bag_diff1), len(bag_diff2)) / max(len(val1), len(val2))
 
     # Add your code here
 
