@@ -305,7 +305,38 @@ def edit_dist_sim_comp(val1, val2):
 
     edit_sim = 0.0  # Replace with your code
 
-    # Add your code here
+    d = [[]]
+    d[0] = [j for j in range(len(val1) + 1)]
+    for i in range(1, len(val2) + 1):
+        d.append([(i if j == 0 else None) for j in range(len(val1) + 1)])
+
+    block_size = 2
+
+    while block_size <= max(len(val1), len(val2)) + 1:
+        ind = block_size - 1
+
+        if ind <= len(val2):
+            row = [(ind, i) for i in range(1, min(ind, len(val1)))]
+        else:
+            row = []
+
+        if ind <= len(val1):
+            col = [(i, ind) for i in range(1, min(ind, len(val2)))]
+        else:
+            col = []
+
+        indices = row + col + [(min(ind, len(val2)), min(ind, len(val1)))]
+
+        for i, j in indices:
+            d[i][j] = min(
+                d[i][j - 1] + 1,
+                d[i - 1][j] + 1,
+                d[i - 1][j - 1] + int(val2[i - 1] != val1[j - 1])
+            )
+
+        block_size += 1
+
+    edit_sim = 1 - d[-1][-1] / max(len(val1), len(val2))
 
     # ************ End of your edit distance code *******************************
 
