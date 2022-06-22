@@ -1,17 +1,30 @@
-a)
-jones / johnson jacc_sim: 0.25
-michelle / michael jacc_sim: 0.4444444444444444
-shackleford / shackelford jacc_sim: 0.5384615384615384
-jan / naj jacc_sim: 0.0
+1a)
+1. jones/johnson: 0.2727272727272727
+2. michelle/michael: 0.4166666666666667
+3. shackleford/shackelford: 0.6
+4. jan/naj: 0.0
 
-b)
-jones / johnson dice_sim: 0.4
-michelle / michael dice_sim: 0.6153846153846154
-shackleford / shackelford dice_sim: 0.70
-jan / naj dice_sim: 0.0
+1b)
+1. jones/johnson: 0.42857142857142855
+2. michelle/michael: 0.5882352941176471
+3. shackleford/shackelford: 0.75
+4. jan/naj: 0.0
 
-c)
-jones / johnson jaro_winkler_sim: 0.8323809523809523
-michelle / michael jaro_winkler_sim: 0.9214285714285715
-shackleford / shackelford jaro_winkler_sim: 0.9818181818181818
-jan / naj jaro_winkler_sim: 0.5555555555555555
+1c)
+1. jones/johnson: 0.5714285714285714
+2. michelle/michael: 0.75
+3. shackleford/shackelford: 1.0
+4. jan/naj: 1.0
+
+1d)
+Redundante Vergleiche können durch den Datentyp Set vermieden werden. Dessen Built-in Methoden intersection() und
+union() vergleichen die notwendigen Q-Grams bestmöglich.
+
+Meine implementierte Funktion q_grams(val, padding=True) reduziert boilerplate,
+jedoch spart es keine weiteren Vergleiche ein.
+
+Weitere Vergleiche könnten mit einem Equality-Cache eingespart werden.
+Dafür nehme man 30 Records in einem Block an. Dafür benötigt es 30*29 Vergleiche.
+Wenn eine Comparison-Funktion 1 zurückgibt, dann werden sie für alle anderen Vergleiche das gleiche Ergebnis haben.
+Damit könnten weitere Vergleiche eingespart werden.
+Je größer die Blöcke werden, desto effizienter macht dieser Equality Cache die Vergleiche.
