@@ -47,8 +47,8 @@ def jaccard_comp(val1, val2):
     # ********* Implement Jaccard similarity function here *********
 
     # Using sets for unique Q-Grams of length 2
-    q_gram1 = set(val1[i:i + 2] for i in range(len(val1)-1))
-    q_gram2 = set(val2[i:i + 2] for i in range(len(val2)-1))
+    q_gram1 = set([f" {val1[0]}"] + [val1[i:i + 2] for i in range(len(val1)-1)] + [f"{val1[-1]} "])
+    q_gram2 = set([f" {val2[0]}"] + [val2[i:i + 2] for i in range(len(val2)-1)] + [f"{val2[-1]} "])
 
     # Calculate cardinality of its intersection divided by the cardinality of its union
     jacc_sim = len(q_gram1.intersection(q_gram2)) / len(q_gram1.union(q_gram2))
@@ -81,8 +81,8 @@ def dice_comp(val1, val2):
 
     # ********* Implement Dice similarity function here *********
     # Using sets for unique Q-Grams of length 2
-    q_gram1 = set(val1[i:i + 2] for i in range(len(val1)-1))
-    q_gram2 = set(val2[i:i + 2] for i in range(len(val2)-1))
+    q_gram1 = set([f" {val1[0]}"] + [val1[i:i + 2] for i in range(len(val1)-1)] + [f"{val1[-1]} "])
+    q_gram2 = set([f" {val2[0]}"] + [val2[i:i + 2] for i in range(len(val2)-1)] + [f"{val2[-1]} "])
 
     # Calculate cardinality of its intersection divided by the sum of cardinalities of the sets
     dice_sim = 2 * len(q_gram1.intersection(q_gram2)) / (len(q_gram1) + len(q_gram2))
