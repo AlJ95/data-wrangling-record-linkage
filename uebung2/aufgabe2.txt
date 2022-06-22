@@ -1,0 +1,10 @@
+2a)
+1. jones/johnson: 0.8323809523809523
+2. michelle/michael: 0.9214285714285715
+3. shackleford/shackelford: 0.9818181818181818
+4. jan/naj: 0.5555555555555555
+2b)
+1. jones/johnson: 0.4285714285714286
+2. michelle/michael: 0.625
+3. shackleford/shackelford: 0.8181818181818181
+4. jan/naj: 0.33333333333333337
