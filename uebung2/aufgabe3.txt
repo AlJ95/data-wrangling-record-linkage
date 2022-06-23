@@ -1,0 +1,58 @@
+3a)
+Datentypen, welche bei einem Tippfehler keinen Sinn ergeben, wie zum Beispiel bei einem Namen: Michael/Muchael sind
+sehr gut geeignet für alle implementierten Vergleichsfunktionen, da sie in der Regel korrekte approximierte
+Ähnlichkeiten wiedergeben. Darunter zählen Namen, Straßennamen und Emails
+
+Für Postleitzahlen gilt zum Beispiel das Gegenteil. Zwei Postleitzahlen, die sich nur in einer Ziffer unterscheiden
+können ein Tippfehler, ein anderer Stadtteil oder ein anderes Bundesland sein. Dies können die Ähnlichkeitsfunktionen
+nicht abbilden. Abgeschwächt gilt dies auch für Telefonnummern und Geburtsdaten.
+
+Dabei gilt aber, dass Jaccard und Dice mehrere Unterschiede in Geburtsdatum und Telefonnummer härter bestraft und daher
+besser dafür geeignet ist als die anderen Ähnlichkeitsfunktionen.
+
+Basierend auf Vergleiche:
+1. 18.02.1995/19.02.1995    # 1 Tippfehler
+2. 17.03.1994/18.04.1993    # 3 "Tippfehler" bzw. anderes Geburtsdatum
+
+1. 02315/12315              # 1 Tippfehler oder Anderes Bundesland
+2. 02315/02314              # 1 Tippfehler oder Anderer Stadtteil
+
+1. 0152370231216/0152370221216      # 1 Tippfehler
+2. 0152370231216/0152271224216      # 3 "Tippfehler" bzw. andere Telefonnummer
+
+3b)
+Setup:
+RecordLinkage Script mit Attributen: First name, Middle name, Last name, Suburb, State verglichen mit der jeweiligen
+Ähnlichkeitsfunktion
+
+Alle clean Datensätze wurden mit 0 FN und 0 FP klassifiziert
+Große Blockgrößen bilden für 10,000er Datensätze enorme Vergleichszeiten dar.
+
+Clean - 10,000
+                        Blocksize AVG: ~11      Blocksize AVG: ~1
+jaccard_comp            18.455 sec              0.015 sec
+dice_comp               17.510 sec              0.017 sec
+bag_dist_sim_comp       8.096 sec               0.018 sec
+jaro_winkler_comp       23.560 sec              0.021 sec
+edit_dist_sim_comp      94.631 sec              0.024 sec
+
+Die dynamisch programmierte levenstein-edit-Ähnlichkeitsfunktion vergleicht für große Blöcke bis zu 12x länger als die
+bag-distance-Ähnlichkeitsfunktion. Die Vergleichsfunktionen verhalten sich alle mit O(s^2*n^2) mit Blocksize s und n records.
+Unabhängig davon performt Bad-Distance deutlich besser als (50% Laufzeit) gegenüber jaccard & dice, (33% Laufzeit)
+gegenüber jaro_winkler und (8.5% Laufzeit) gegenüber dynamischer Levenstein-Edit-Distance.
+Dies ist auch unabhängig vom gewählten Datensatz.
+
+Daraus resultiert, dass große Blockgrößen unvorteilhaft für alle Ähnlichkeitsfunktionen sind. Vor allem für saubere
+Daten sollte SLK Blocking verwendet werden, da hier für Soundex größere Blöcke resultieren und daher nur für unsaubere
+Daten verwendet werden sollte.
+
+
+3c)
+Geografische Ähnlichkeiten werden nicht betrachtet. Eine Addresse besteht aus Straßennamen, PLZ und Suburb usw.
+Diese können zwar bzgl. ihres Namens verglichen werden, jedoch könnte eine intelligente
+Datenbank auch Koordinaten der Adresse erstellen, falls diese bei Dateneingang auf Korrektheit überprüft wurde.
+Diese Koordinaten könnte man besser vergleichen, wenn man davon ausgeht, dass ein Umzug zum Beispiel innerhalb der Stadt
+Wohnumgebung wahrscheinlicher ist.
+
+Numerische Werte werden nicht korrekt verglichen. Die ausgedachten Gewichtswerte "80 Kg" und "81 Kg" sind laut
+implementierten Funktionen genauso ähnlich wie "80 Kg" und "89 Kg" und noch unähnlicher als "80 Kg" und "80.1 Kg".
