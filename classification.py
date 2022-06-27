@@ -8,6 +8,8 @@
 
 
 # =============================================================================
+import math
+
 
 def exactClassify(sim_vec_dict):
     """Method to classify the given similarity vector dictionary assuming only
@@ -79,7 +81,13 @@ def thresholdClassify(sim_vec_dict, sim_thres):
     for (rec_id_tuple, sim_vec) in sim_vec_dict.items():
         # ********* Implement threshold based classification **********************
 
-        pass  # Add your code here
+        # Add your code here
+        sim_avg = sum(sim_vec)/len(sim_vec_dict)  # Avg all attribute similarities
+
+        if sim_avg > sim_thres:
+            class_match_set.add(rec_id_tuple)
+        else:
+            class_nonmatch_set.add(rec_id_tuple)
 
         # ************ End of your code *******************************************
 
@@ -120,7 +128,13 @@ def minThresholdClassify(sim_vec_dict, sim_thres):
     for (rec_id_tuple, sim_vec) in sim_vec_dict.items():
         # ********* Implement minimum threshold classification ********************
 
-        pass  # Add your code here
+        # Add your code here
+        sim_min = min(sim_vec)  # Minimum of all attribute similarities
+
+        if sim_min > sim_thres:
+            class_match_set.add(rec_id_tuple)
+        else:
+            class_nonmatch_set.add(rec_id_tuple)
 
         # ************ End of your code *******************************************
 
@@ -171,7 +185,16 @@ def weightedSimilarityClassify(sim_vec_dict, weight_vec, sim_thres):
     for (rec_id_tuple, sim_vec) in sim_vec_dict.items():
         # ******* Implement weighted similarity classification ********************
 
-        pass  # Add your code here
+        # Add your code here
+
+        # Weighted Avg all attribute similarities
+        sim_avg_weighted = sum([sim_val * weight_val/sum(weight_vec)
+                                for sim_val, weight_val in zip(sim_vec, weight_vec)]) / len(sim_vec_dict)
+
+        if sim_avg_weighted > sim_thres:
+            class_match_set.add(rec_id_tuple)
+        else:
+            class_nonmatch_set.add(rec_id_tuple)
 
         # ************ End of your code *******************************************
 
@@ -191,7 +214,12 @@ def automatic_weight_computation(rec_dict_a: dict, rec_dict_b: dict, compared_at
     :param compared_attribute_idx: attributes being compared
     :return:
     """
-    pass
+    count_U = len(
+        set([v[compared_attribute_idx] for k, v in rec_dict_b.items()]).union(
+        set([v[compared_attribute_idx] for k, v in rec_dict_a.items()])
+    ))
+
+    return math.log2(count_U)
 
 # -----------------------------------------------------------------------------
 # TODO 4 apply supervised ML classification
