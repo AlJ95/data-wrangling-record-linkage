@@ -18,13 +18,17 @@ Run SLK-581 blocking:
 Compare 1000 blocks from dataset A with 1000 blocks from dataset B
   Compared 500 record pairs
 
+Similarity threshold based classification of 500 record pairs
+  Classification similarity threshold: 0.500
+  Classified 500 record pairs as matches and 0 as non-matches
+
 Weighted similarity based classification of 500 record pairs
   Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
   Classification similarity threshold: 0.500
-  Classified 0 record pairs as matches and 500 as non-matches
+  Classified 500 record pairs as matches and 0 as non-matches
 
-Calculating confusion matrix using 0 classified matches, 500 classified non-matches, and 500 true matches
-  TP=0, FP=0, FN=500, TN=999500
+Calculating confusion matrix using 500 classified matches, 0 classified non-matches, and 500 true matches
+  TP=500, FP=0, FN=0, TN=999500
 
 
 
@@ -45,13 +49,17 @@ Run SLK-581 blocking:
 Compare 9999 blocks from dataset A with 9999 blocks from dataset B
   Compared 5002 record pairs
 
+Similarity threshold based classification of 5002 record pairs
+  Classification similarity threshold: 0.500
+  Classified 5000 record pairs as matches and 2 as non-matches
+
 Weighted similarity based classification of 5002 record pairs
   Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
   Classification similarity threshold: 0.500
-  Classified 0 record pairs as matches and 5002 as non-matches
+  Classified 5000 record pairs as matches and 2 as non-matches
 
-Calculating confusion matrix using 0 classified matches, 5002 classified non-matches, and 5000 true matches
-  TP=0, FP=0, FN=5000, TN=99995000
+Calculating confusion matrix using 5000 classified matches, 2 classified non-matches, and 5000 true matches
+  TP=5000, FP=0, FN=0, TN=99995000
 
 
 
@@ -72,13 +80,17 @@ Run SLK-581 blocking:
 Compare 1000 blocks from dataset A with 1000 blocks from dataset B
   Compared 400 record pairs
 
+Similarity threshold based classification of 400 record pairs
+  Classification similarity threshold: 0.500
+  Classified 400 record pairs as matches and 0 as non-matches
+
 Weighted similarity based classification of 400 record pairs
   Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
   Classification similarity threshold: 0.500
-  Classified 0 record pairs as matches and 400 as non-matches
+  Classified 400 record pairs as matches and 0 as non-matches
 
-Calculating confusion matrix using 0 classified matches, 400 classified non-matches, and 500 true matches
-  TP=0, FP=0, FN=500, TN=999500
+Calculating confusion matrix using 400 classified matches, 0 classified non-matches, and 500 true matches
+  TP=400, FP=0, FN=100, TN=999500
 
 
 
@@ -99,13 +111,17 @@ Run SLK-581 blocking:
 Compare 9999 blocks from dataset A with 10000 blocks from dataset B
   Compared 4000 record pairs
 
+Similarity threshold based classification of 4000 record pairs
+  Classification similarity threshold: 0.500
+  Classified 4000 record pairs as matches and 0 as non-matches
+
 Weighted similarity based classification of 4000 record pairs
   Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
   Classification similarity threshold: 0.500
-  Classified 0 record pairs as matches and 4000 as non-matches
+  Classified 4000 record pairs as matches and 0 as non-matches
 
-Calculating confusion matrix using 0 classified matches, 4000 classified non-matches, and 5000 true matches
-  TP=0, FP=0, FN=5000, TN=99995000
+Calculating confusion matrix using 4000 classified matches, 0 classified non-matches, and 5000 true matches
+  TP=4000, FP=0, FN=1000, TN=99995000
 
 
 Process finished with exit code 0

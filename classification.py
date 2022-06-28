@@ -82,7 +82,7 @@ def thresholdClassify(sim_vec_dict, sim_thres):
         # ********* Implement threshold based classification **********************
 
         # Add your code here
-        sim_avg = sum(sim_vec)/len(sim_vec_dict)  # Avg all attribute similarities
+        sim_avg = sum(sim_vec)/len(sim_vec)  # Avg all attribute similarities
 
         if sim_avg > sim_thres:
             class_match_set.add(rec_id_tuple)
@@ -188,8 +188,8 @@ def weightedSimilarityClassify(sim_vec_dict, weight_vec, sim_thres):
         # Add your code here
 
         # Weighted Avg all attribute similarities
-        sim_avg_weighted = sum([sim_val * weight_val/sum(weight_vec)
-                                for sim_val, weight_val in zip(sim_vec, weight_vec)]) / len(sim_vec_dict)
+        sim_avg_weighted = sum([sim_val * weight_val/weight_sum
+                                for sim_val, weight_val in zip(sim_vec, weight_vec)])
 
         if sim_avg_weighted > sim_thres:
             class_match_set.add(rec_id_tuple)

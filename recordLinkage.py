@@ -218,8 +218,8 @@ for name in ["clean", "little-dirty"]:
             # sim_threshold = 0.5
             sim_threshold = 0.7
             #
-            # class_match_set, class_nonmatch_set = \
-            #             classification.thresholdClassify(sim_vec_dict, sim_threshold)
+            class_match_set, class_nonmatch_set = \
+                        classification.thresholdClassify(sim_vec_dict, sim_threshold)
 
             # Minimum similarity threshold based classification
             #
