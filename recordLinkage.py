@@ -15,6 +15,8 @@
 
 import time
 
+import numpy as np
+
 import blocking
 import classification
 import comparison
@@ -26,9 +28,11 @@ import loadDataset
 
 # ******** Uncomment to select a pair of datasets **************
 #
-
-for name in ["clean", "little-dirty"]:
-    for records in [1000, 10000]:
+best_res = (0, [1,1,1,1,1,1])
+# for name in ["clean", "little-dirty"]:
+#     for records in [1000, 10000]:
+for name in ["little-dirty"]:
+    for records in [1000]:
         # for comp_func in [
         #     comparison.jaccard_comp,
         #     comparison.dice_comp,
@@ -36,11 +40,15 @@ for name in ["clean", "little-dirty"]:
         #     comparison.jaro_winkler_comp,
         #     comparison.edit_dist_sim_comp
         # ]:
-            print("\n\n\n\n\n")
-            print("#############################################")
+        # for sim_threshold in [0.5, 0.7]:
+        # for _ in range(250):
+            sim_threshold = 0.7
+            # print("\n\n\n\n\n")
+            # print("#############################################")
             # print(f"Name:{name}\nRecords:{records}\nComparion Function:{comp_func.__name__}")
-            print(f"Name:{name}\nRecords:{records}")
-            print("#############################################")
+            # print(f"Threshold: {sim_threshold}")
+            # print(f"Name:{name}\nRecords:{records}")
+            # print("#############################################")
             # name = "little-dirty"
             # name = "clean"
 
@@ -216,7 +224,7 @@ for name in ["clean", "little-dirty"]:
             # Similarity threshold based classification
 
             # sim_threshold = 0.5
-            sim_threshold = 0.7
+            # sim_threshold = 0.7
             # #
             # class_match_set, class_nonmatch_set = \
             #             classification.thresholdClassify(sim_vec_dict, sim_threshold)
@@ -237,7 +245,11 @@ for name in ["clean", "little-dirty"]:
 
             # Lower weights for middle name and state
             #
-            weight_vec = [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
+            # weight_vec = [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
+            weight_vec = [1.0, 0.05, 2.0, 1., 1., 0.05]
+            # weight_vec = np.random.rand(6)
+            # weight_vec[1] = 0.05
+            # weight_vec[2] *= 2
             # #
             class_match_set, class_nonmatch_set = \
                         classification.weightedSimilarityClassify(sim_vec_dict,
@@ -307,3 +319,12 @@ for name in ["clean", "little-dirty"]:
             # -----------------------------------------------------------------------------
 
             # End of program.
+
+            res = linkage_result[0]/500 * (100 - linkage_result[1])/100
+
+            if res > best_res[0]:
+                best_res = (res, linkage_result, weight_vec)
+
+print(best_res)
+
+#(0.91, array([1.16782445, 0.37154792, 2.74824586, 1.6841413 , 1.28609957, 0.67843916]))
