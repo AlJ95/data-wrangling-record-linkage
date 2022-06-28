@@ -1,0 +1,33 @@
+Aufgabe 3.2 a)
+clean-1,000:            [9.544964432789238, 9.614709844115207, 10.094077685671905, 10.535275376620802, 10.041659151637214, 3.0]
+clean-10,000:           [11.65508344519798, 11.996826528020659, 12.655754310144218, 13.831999919509737, 11.839991070539886, 3.0]
+little-dirty-1,000:     [10.256208688527387, 10.177419537989236, 10.485829308701904, 10.634811050171718, 10.487840033823051, 3.0]
+little-dirty-10,000:    [12.9762060901486, 12.960364008877834, 13.440739423014273, 13.948275965094634, 13.289154353723356, 3.0]
+
+Aufgabe 3.2 b)
+
+True-Positives/False-Positives/False-Negatives
+
+Threshold = 0.7
+                    simple threshold        autmatic-weight
+1,000
+clean               500/2/ 0 (502)                500/0/0  (500)
+little-dirty        454/1/46 (455)                451/0/49 (451)
+
+10,000
+clean               5000/169/  0 (5169)            5000/24/0  (5024)
+little-dirty        4434/ 27/566 (4461)            4397/3/603 (4400)
+
+
+Durch die automatisierte Gewichtung werden weniger Matches generiert.
+
+Aufgabe 3.2 c)
+
+Die automatisierte Gewichtung der Attribute berücksichtigt keine logischen Gewichtungen.
+Zum Beispiel haben die Adressen das höchste Gewicht bei dieser Berechnung. Dabei wird aber nicht beachtet, dass
+Menschen a) umziehen und b) Adressen unterschiedlich schreiben zB. Eisenbahnstraße/ Eisenbahnstr.
+
+Wenn die gewählten Attribute allerdings alle die gleiche Wichtigkeit haben, dann ist die automatisierte Gewichtung vorteilhaft.
+Daher würde ich bevorzugen. Man könnte dabei einen hybriden Weg einschlagen:
+Berechne Gewichte mittels automatisierter Gewichtung und multipliziere danach noch auf diese Gewichtsresultate eine vorher definierte
+Gewichtung, die berückstigt, dass zum Beispiel Straßennamen nicht so relevant sind, wie Namen.
