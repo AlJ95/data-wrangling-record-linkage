@@ -1,0 +1,108 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 346 blocks from dataset A with 346 blocks from dataset B
+  Compared 7232 record pairs
+
+
+*********************
+
+[9.544964432789238, 9.614709844115207, 10.094077685671905, 10.535275376620802, 10.041659151637214, 3.0]
+
+*********************
+
+Weighted similarity based classification of 7232 record pairs
+  Weight vector: [9.544964432789238, 9.614709844115207, 10.094077685671905, 10.535275376620802, 10.041659151637214, 3.0]
+  Classification similarity threshold: 0.700
+  Classified 500 record pairs as matches and 6732 as non-matches
+
+Calculating confusion matrix using 500 classified matches, 6732 classified non-matches, and 500 true matches
+  TP=500, FP=0, FN=0, TN=999500
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Compare 900 blocks from dataset A with 887 blocks from dataset B
+  Compared 662681 record pairs
+
+
+*********************
+
+[11.65508344519798, 11.996826528020659, 12.655754310144218, 13.831999919509737, 11.839991070539886, 3.0]
+
+*********************
+
+Weighted similarity based classification of 662681 record pairs
+  Weight vector: [11.65508344519798, 11.996826528020659, 12.655754310144218, 13.831999919509737, 11.839991070539886, 3.0]
+  Classification similarity threshold: 0.700
+  Classified 5024 record pairs as matches and 657657 as non-matches
+
+Calculating confusion matrix using 5024 classified matches, 657657 classified non-matches, and 5000 true matches
+  TP=5000, FP=24, FN=0, TN=99994976
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 401 blocks from dataset A with 514 blocks from dataset B
+  Compared 4214 record pairs
+
+
+*********************
+
+[10.256208688527387, 10.177419537989236, 10.485829308701904, 10.634811050171718, 10.487840033823051, 3.0]
+
+*********************
+
+Weighted similarity based classification of 4214 record pairs
+  Weight vector: [10.256208688527387, 10.177419537989236, 10.485829308701904, 10.634811050171718, 10.487840033823051, 3.0]
+  Classification similarity threshold: 0.700
+  Classified 451 record pairs as matches and 3763 as non-matches
+
+Calculating confusion matrix using 451 classified matches, 3763 classified non-matches, and 500 true matches
+  TP=451, FP=0, FN=49, TN=999500
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Compare 1387 blocks from dataset A with 1899 blocks from dataset B
+  Compared 399779 record pairs
+
+
+*********************
+
+[12.9762060901486, 12.960364008877834, 13.440739423014273, 13.948275965094634, 13.289154353723356, 3.0]
+
+*********************
+
+Weighted similarity based classification of 399779 record pairs
+  Weight vector: [12.9762060901486, 12.960364008877834, 13.440739423014273, 13.948275965094634, 13.289154353723356, 3.0]
+  Classification similarity threshold: 0.700
+  Classified 4400 record pairs as matches and 395379 as non-matches
+
+Calculating confusion matrix using 4400 classified matches, 395379 classified non-matches, and 5000 true matches
+  TP=4397, FP=3, FN=603, TN=99994997
+
+(8.53018, [4397, 3, 603, 99994997], [12.9762060901486, 12.960364008877834, 13.440739423014273, 13.948275965094634, 13.289154353723356, 3.0])
+
+Process finished with exit code 0
