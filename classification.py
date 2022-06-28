@@ -214,12 +214,14 @@ def automatic_weight_computation(rec_dict_a: dict, rec_dict_b: dict, compared_at
     :param compared_attribute_idx: attributes being compared
     :return:
     """
-    count_U = len(
-        set([v[compared_attribute_idx] for k, v in rec_dict_b.items()]).union(
-        set([v[compared_attribute_idx] for k, v in rec_dict_a.items()])
-    ))
+    count_Us = []
+    for ind in compared_attribute_idx:
+        count_Us.append(len(
+            set([v[ind] for k, v in rec_dict_b.items()]).union(
+            set([v[ind] for k, v in rec_dict_a.items()])
+        )))
 
-    return math.log2(count_U)
+    return [math.log2(count_U) for count_U in count_Us]
 
 # -----------------------------------------------------------------------------
 # TODO 4 apply supervised ML classification
