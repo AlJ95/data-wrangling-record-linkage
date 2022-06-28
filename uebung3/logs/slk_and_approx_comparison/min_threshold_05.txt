@@ -1,0 +1,107 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+
+
+
+
+
+
+#############################################
+Name:clean
+Records:1000
+#############################################
+Run SLK-581 blocking:
+  Number of records to be blocked: 1000
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 1000
+
+Compare 1000 blocks from dataset A with 1000 blocks from dataset B
+  Compared 500 record pairs
+
+Minimum similarity threshold based classification of 500 record pairs
+  Classification similarity threshold: 0.500
+  Classified 496 record pairs as matches and 4 as non-matches
+
+Calculating confusion matrix using 496 classified matches, 4 classified non-matches, and 500 true matches
+  TP=496, FP=0, FN=4, TN=999500
+
+
+
+
+
+
+
+#############################################
+Name:clean
+Records:10000
+#############################################
+Run SLK-581 blocking:
+  Number of records to be blocked: 10000
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 10000
+
+Compare 9999 blocks from dataset A with 9999 blocks from dataset B
+  Compared 5002 record pairs
+
+Minimum similarity threshold based classification of 5002 record pairs
+  Classification similarity threshold: 0.500
+  Classified 4955 record pairs as matches and 47 as non-matches
+
+Calculating confusion matrix using 4955 classified matches, 47 classified non-matches, and 5000 true matches
+  TP=4955, FP=0, FN=45, TN=99995000
+
+
+
+
+
+
+
+#############################################
+Name:little-dirty
+Records:1000
+#############################################
+Run SLK-581 blocking:
+  Number of records to be blocked: 1000
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 1000
+
+Compare 1000 blocks from dataset A with 1000 blocks from dataset B
+  Compared 400 record pairs
+
+Minimum similarity threshold based classification of 400 record pairs
+  Classification similarity threshold: 0.500
+  Classified 399 record pairs as matches and 1 as non-matches
+
+Calculating confusion matrix using 399 classified matches, 1 classified non-matches, and 500 true matches
+  TP=399, FP=0, FN=101, TN=999500
+
+
+
+
+
+
+
+#############################################
+Name:little-dirty
+Records:10000
+#############################################
+Run SLK-581 blocking:
+  Number of records to be blocked: 10000
+
+Run SLK-581 blocking:
+  Number of records to be blocked: 10000
+
+Compare 9999 blocks from dataset A with 10000 blocks from dataset B
+  Compared 4000 record pairs
+
+Minimum similarity threshold based classification of 4000 record pairs
+  Classification similarity threshold: 0.500
+  Classified 3944 record pairs as matches and 56 as non-matches
+
+Calculating confusion matrix using 3944 classified matches, 56 classified non-matches, and 5000 true matches
+  TP=3944, FP=0, FN=1056, TN=99995000
+
+
+Process finished with exit code 0
