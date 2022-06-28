@@ -46,3 +46,22 @@ Das Soundex Blocking hat für die unsauberen Daten nur 455 Matches gemeinsam geb
 Die vorgegebenen Gewichtungen sind daher für dieses Blocking bestmöglich.
 Bei randomisierten Gewichten hat sich allerdings auch bewährt, den Nachnamen doppelt so stark zu gewichten und den Zweitnamen & State möglichst klein.
 Daher wäre auch die folgenden Gewichtung für diesen Durchlauf bestmöglich: array([1, 0.05, 2., 1. , 1., 0.05])
+
+1.) d)
+Die m.A. beste Gewichtung ist [1, 0.05, 2., 1. ,1. ,0.05]
+Diese hat 3 FP-Matches:
+['', 'john', 'joseph', 'mcbride', 'm', '', '25/1/1967', '386  bridge  road', 'mackay', '4740', 'qld', '07  6076  2505', '']
+['', 'john', 'd', 'morgan', 'm', '', '11/2/1993', '36  mcintyre  street', 'mackay', '4740', 'qld', '07  5387  6705', '']
+-----------------
+['', 'william', 'randal', 'johnson', 'm', '', '7/4/1973', '21  dock  street', 'south  brisbane', '4101', 'qld', '07  8503  2174', '']
+['', 'william', 'anthony', 'johnson', 'm', '', '22/4/1981', '7  sealey  street', 'condobolin', '2877', 'nsw', '02  5115  9853', '']
+-----------------
+['', 'john', 'nils', 'morgan', 'm', '', '12/5/1988', '58  tyrell  street', 'wallsend', '2287', 'nsw', '02  1313  6667', '']
+['', 'john', 'd', 'morgan', 'm', '', '11/2/1993', '36  mcintyre  street', 'mackay', '4740', 'qld', '07  5387  6705', '']
+-----------------
+Alle drei sind offensichtlich falsch. Besonders ersichtlich ist dies beim Geburtstag. In diesen Fällen wäre eine
+Betrachtung des Geburtstages sinnvoll gewesen, wenn wir für dieses Attribut eine geeignete Ähnlichkeitsfunktion
+implementieren würden. Voraussetzung wäre jedoch, dass Geburtstage selten fehlen.
+
+Möglich wäre zum Beispiel eine AverageSimilarity von Geburtstagen im Format DD/MM/YYYY für jede Zahl.
+Damit wären auch Schreibfehler gedeckt.
