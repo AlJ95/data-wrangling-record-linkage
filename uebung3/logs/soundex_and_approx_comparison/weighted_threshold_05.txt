@@ -1,0 +1,135 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+
+
+
+
+
+
+#############################################
+Name:clean
+Records:1000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 346 blocks from dataset A with 346 blocks from dataset B
+  Compared 7232 record pairs
+
+Similarity threshold based classification of 7232 record pairs
+  Classification similarity threshold: 0.500
+  Classified 1024 record pairs as matches and 6208 as non-matches
+
+Weighted similarity based classification of 7232 record pairs
+  Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
+  Classification similarity threshold: 0.500
+  Classified 1098 record pairs as matches and 6134 as non-matches
+
+Calculating confusion matrix using 1098 classified matches, 6134 classified non-matches, and 500 true matches
+  TP=500, FP=598, FN=0, TN=998902
+
+
+
+
+
+
+
+#############################################
+Name:clean
+Records:10000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Compare 900 blocks from dataset A with 887 blocks from dataset B
+  Compared 662681 record pairs
+
+Similarity threshold based classification of 662681 record pairs
+  Classification similarity threshold: 0.500
+  Classified 52149 record pairs as matches and 610532 as non-matches
+
+Weighted similarity based classification of 662681 record pairs
+  Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
+  Classification similarity threshold: 0.500
+  Classified 59158 record pairs as matches and 603523 as non-matches
+
+Calculating confusion matrix using 59158 classified matches, 603523 classified non-matches, and 5000 true matches
+  TP=5000, FP=54158, FN=0, TN=99940842
+
+
+
+
+
+
+
+#############################################
+Name:little-dirty
+Records:1000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 401 blocks from dataset A with 514 blocks from dataset B
+  Compared 4214 record pairs
+
+Similarity threshold based classification of 4214 record pairs
+  Classification similarity threshold: 0.500
+  Classified 603 record pairs as matches and 3611 as non-matches
+
+Weighted similarity based classification of 4214 record pairs
+  Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
+  Classification similarity threshold: 0.500
+  Classified 607 record pairs as matches and 3607 as non-matches
+
+Calculating confusion matrix using 607 classified matches, 3607 classified non-matches, and 500 true matches
+  TP=455, FP=152, FN=45, TN=999348
+
+
+
+
+
+
+
+#############################################
+Name:little-dirty
+Records:10000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Compare 1387 blocks from dataset A with 1899 blocks from dataset B
+  Compared 399779 record pairs
+
+Similarity threshold based classification of 399779 record pairs
+  Classification similarity threshold: 0.500
+  Classified 15481 record pairs as matches and 384298 as non-matches
+
+Weighted similarity based classification of 399779 record pairs
+  Weight vector: [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
+  Classification similarity threshold: 0.500
+  Classified 16403 record pairs as matches and 383376 as non-matches
+
+Calculating confusion matrix using 16403 classified matches, 383376 classified non-matches, and 5000 true matches
+  TP=4442, FP=11961, FN=558, TN=99983039
+
+
+Process finished with exit code 0

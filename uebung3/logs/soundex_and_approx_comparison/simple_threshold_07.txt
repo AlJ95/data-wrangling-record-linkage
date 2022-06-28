@@ -1,0 +1,115 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+
+
+
+
+
+
+#############################################
+Name:clean
+Records:1000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 346 blocks from dataset A with 346 blocks from dataset B
+  Compared 7232 record pairs
+
+Similarity threshold based classification of 7232 record pairs
+  Classification similarity threshold: 0.700
+  Classified 502 record pairs as matches and 6730 as non-matches
+
+Calculating confusion matrix using 502 classified matches, 6730 classified non-matches, and 500 true matches
+  TP=500, FP=2, FN=0, TN=999498
+
+
+
+
+
+
+
+#############################################
+Name:clean
+Records:10000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Compare 900 blocks from dataset A with 887 blocks from dataset B
+  Compared 662681 record pairs
+
+Similarity threshold based classification of 662681 record pairs
+  Classification similarity threshold: 0.700
+  Classified 5169 record pairs as matches and 657512 as non-matches
+
+Calculating confusion matrix using 5169 classified matches, 657512 classified non-matches, and 5000 true matches
+  TP=5000, FP=169, FN=0, TN=99994831
+
+
+
+
+
+
+
+#############################################
+Name:little-dirty
+Records:1000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 401 blocks from dataset A with 514 blocks from dataset B
+  Compared 4214 record pairs
+
+Similarity threshold based classification of 4214 record pairs
+  Classification similarity threshold: 0.700
+  Classified 455 record pairs as matches and 3759 as non-matches
+
+Calculating confusion matrix using 455 classified matches, 3759 classified non-matches, and 500 true matches
+  TP=454, FP=1, FN=46, TN=999499
+
+
+
+
+
+
+
+#############################################
+Name:little-dirty
+Records:10000
+#############################################
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 10000
+
+Compare 1387 blocks from dataset A with 1899 blocks from dataset B
+  Compared 399779 record pairs
+
+Similarity threshold based classification of 399779 record pairs
+  Classification similarity threshold: 0.700
+  Classified 4461 record pairs as matches and 395318 as non-matches
+
+Calculating confusion matrix using 4461 classified matches, 395318 classified non-matches, and 5000 true matches
+  TP=4434, FP=27, FN=566, TN=99994973
+
+
+Process finished with exit code 0

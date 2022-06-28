@@ -167,8 +167,8 @@ for name in ["clean", "little-dirty"]:
 
             # Phonetic (Soundex) based blocking
             #
-            # blockA_dict = blocking.phoneticBlocking(recA_dict, blocking_attrA_list)
-            # blockB_dict = blocking.phoneticBlocking(recB_dict, blocking_attrB_list)
+            blockA_dict = blocking.phoneticBlocking(recA_dict, blocking_attrA_list)
+            blockB_dict = blocking.phoneticBlocking(recB_dict, blocking_attrB_list)
 
             # Statistical linkage key (SLK-581) based blocking
             #
@@ -177,12 +177,12 @@ for name in ["clean", "little-dirty"]:
             dob_attr_ind = 6
             gender_attr_ind = 4
 
-            blockA_dict = blocking.slkBlocking(recA_dict, fam_name_attr_ind, \
-                                               giv_name_attr_ind, dob_attr_ind, \
-                                               gender_attr_ind)
-            blockB_dict = blocking.slkBlocking(recB_dict, fam_name_attr_ind, \
-                                               giv_name_attr_ind, dob_attr_ind, \
-                                               gender_attr_ind)
+            # blockA_dict = blocking.slkBlocking(recA_dict, fam_name_attr_ind, \
+            #                                    giv_name_attr_ind, dob_attr_ind, \
+            #                                    gender_attr_ind)
+            # blockB_dict = blocking.slkBlocking(recB_dict, fam_name_attr_ind, \
+            #                                    giv_name_attr_ind, dob_attr_ind, \
+            #                                    gender_attr_ind)
 
             blocking_time = time.time() - start_time
 
@@ -217,9 +217,9 @@ for name in ["clean", "little-dirty"]:
 
             # sim_threshold = 0.5
             sim_threshold = 0.7
-            #
-            class_match_set, class_nonmatch_set = \
-                        classification.thresholdClassify(sim_vec_dict, sim_threshold)
+            # #
+            # class_match_set, class_nonmatch_set = \
+            #             classification.thresholdClassify(sim_vec_dict, sim_threshold)
 
             # Minimum similarity threshold based classification
             #
@@ -238,7 +238,7 @@ for name in ["clean", "little-dirty"]:
             # Lower weights for middle name and state
             #
             weight_vec = [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
-            #
+            # #
             class_match_set, class_nonmatch_set = \
                         classification.weightedSimilarityClassify(sim_vec_dict,
                                                                   weight_vec,
