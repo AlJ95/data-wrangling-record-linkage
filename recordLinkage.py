@@ -19,6 +19,7 @@ import numpy as np
 
 import blocking
 import classification
+import classification_al
 import comparison
 import evaluation
 import loadDataset
@@ -29,10 +30,10 @@ import loadDataset
 # ******** Uncomment to select a pair of datasets **************
 #
 best_res = (0, [1,1,1,1,1,1])
-# for name in ["clean", "little-dirty"]:
-#     for records in [1000, 10000]:
-for name in ["little-dirty"]:
-    for records in [1000]:
+for name in ["clean", "little-dirty"]:
+    for records in [1000, 10000]:
+# for name in ["little-dirty"]:
+#     for records in [1000]:
         # for comp_func in [
         #     comparison.jaccard_comp,
         #     comparison.dice_comp,
@@ -242,24 +243,28 @@ for name in ["little-dirty"]:
             # Weighted similarity threshold based classification
             #
             # weight_vec = [1.0] * len(approx_comp_funct_list)
-
+            # weight_vec = classification.automatic_weight_computation(recA_dict, recB_dict, [1, 2, 3, 7, 8, 10])
+            # print("\n*********************\n")
+            # print(weight_vec)
+            # print("\n*********************\n")
             # Lower weights for middle name and state
             #
             # weight_vec = [2.0, 1.0, 2.0, 2.0, 2.0, 1.0]
-            weight_vec = [1.0, 0.05, 2.0, 1., 1., 0.05]
+            # weight_vec = [1.0, 0.05, 2.0, 1., 1., 0.05]
             # weight_vec = np.random.rand(6)
             # weight_vec[1] = 0.05
             # weight_vec[2] *= 2
             # #
-            class_match_set, class_nonmatch_set = \
-                        classification.weightedSimilarityClassify(sim_vec_dict,
-                                                                  weight_vec,
-                                                                  sim_threshold)
+            # class_match_set, class_nonmatch_set = \
+            #             classification.weightedSimilarityClassify(sim_vec_dict,
+            #                                                       weight_vec,
+            #                                                       sim_threshold)
 
             # A supervised decision tree classifier
             #
-            # class_match_set, class_nonmatch_set = \
-            #           classification.supervisedMLClassify(sim_vec_dict, true_match_set)
+            class_al = classification_al.ActiveLearning()
+            class_match_set, class_nonmatch_set = \
+                      class_al.active_learning(sim_vec_dict, true_match_set)
 
             classification_time = time.time() - start_time
 
@@ -320,10 +325,10 @@ for name in ["little-dirty"]:
 
             # End of program.
 
-            res = linkage_result[0]/500 * (100 - linkage_result[1])/100
+            # res = linkage_result[0]/500 * (100 - linkage_result[1])/100
 
-            if res > best_res[0]:
-                best_res = (res, linkage_result, weight_vec)
+            # if res > best_res[0]:
+            #     best_res = (res, linkage_result, weight_vec)
 
 print(best_res)
 
