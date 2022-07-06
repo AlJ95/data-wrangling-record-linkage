@@ -73,19 +73,22 @@ class ActiveLearning:
 
         # train decision tree using the generated training data set
         # init DecisionTrees
-        decision_trees = [tree.DecisionTreeClassifier() for _ in range(self.k)]
         while used_budget < self.budget:
             # generate k models based on bootstrapping
             classifiers = []
             # ADD classifier generation code here
             selector = np.array(np.arange(len(current_train_vectors)))
-            n = len(selector)//2
+
+            # Number of records for each decision tree to train
+            n = len(selector)//self.k
             for i in range(self.k):
                 np.random.shuffle(selector)
+                decision_trees = [tree.DecisionTreeClassifier() for _ in range(self.k)]
                 dt = decision_trees[i]
                 dt.fit(current_train_vectors[selector[:n]], current_train_class[selector[:n]])
                 classifiers.append(dt)
 
+            # ADD uncertainty computation code here
             # compute the uncertainty for each similarity vector in unlabelled_vectors
             # dictionary <index in unlabeled_vectors, uncertainty value of the corresponding vector>
             model_results = {ind: sum([classifier.predict([val])[0]/self.k for classifier in classifiers])
@@ -94,8 +97,6 @@ class ActiveLearning:
             uncertainties = {ind: [res * (1 - res) for res in model_results.values()][-1]
                              for ind, val in enumerate(unlabeled_vectors)}
 
-            # ADD uncertainty computation code here
-            print(max(uncertainties.values()))
             # sort the unlabelled vectors by the computed uncertainty and select new vectors
             candidate_examples = sorted(uncertainties.items(), key=operator.itemgetter(1), reverse=True)[
                                  :min(self.iteration_budget, len(uncertainties))]
