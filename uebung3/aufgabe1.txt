@@ -33,10 +33,10 @@ little-dirty        4442/11039/558          4434/ 27/566            4171/0/819  
 
 1.) b)
 
-Je niedriger der Threshold, desto mehr Matches werden zugelassen.
-Für saubere Daten eignet sich ein höherer Threshold, da die Ähnlichkeiten der True-Matches sehr hoch sind.
-Dadurch können die Anzahl von FP entsprechend reduziert werden.
-Für unsaubere Daten sind bei Threshold=0.7 sehr leichte Verluste in den True-Matches zu sehen.
+Attribute mit hohen Gewichtungen haben mehr Einfluss auf ein Match, als Attribute mit kleineren Gewichtungen.
+ Das macht vor allem dann Sinn, wenn gewisse Attribute eine geringere Anzahl an Möglichkeiten hat.
+ Beispielsweise sollte das Attribut State einen geringe Gewichtung bekommen. Eine relativ hohe Gewichtung würde dazu führen, dass
+ die durchschnittliche Ähnlichkeit pro gematchten Records steigt, da sehr viele Menschen im selben State leben.
 
 1.) c)
 Höhere Gewichtungen für Vor- und Nachnamen ([3.0, 1.0, 3.0, 2.0, 2.0, 1.0]) resultieren zu mehr FP Matches.
@@ -48,7 +48,7 @@ Bei randomisierten Gewichten hat sich allerdings auch bewährt, den Nachnamen do
 Daher wäre auch die folgenden Gewichtung für diesen Durchlauf bestmöglich: array([1, 0.05, 2., 1. , 1., 0.05])
 
 1.) d)
-Die m.A. beste Gewichtung ist [1, 0.05, 2., 1. ,1. ,0.05]
+Die meiner Ansicht nach beste Gewichtung ist [1, 0.05, 2., 1. ,1. ,0.05]
 Diese hat 3 FP-Matches:
 ['', 'john', 'joseph', 'mcbride', 'm', '', '25/1/1967', '386  bridge  road', 'mackay', '4740', 'qld', '07  6076  2505', '']
 ['', 'john', 'd', 'morgan', 'm', '', '11/2/1993', '36  mcintyre  street', 'mackay', '4740', 'qld', '07  5387  6705', '']
