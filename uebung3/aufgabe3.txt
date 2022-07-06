@@ -1,0 +1,33 @@
+3) a)
+Supervised
+    clean-1000:         TP:500/500   (FP=0, FN=0 , TN=999500)
+    little-dirty-1000:  TP:455/455   (FP=0, FN=45, TN=999500)
+
+Active Learning
+    Budget: 100
+        clean-1000:         TP=500/500, (FP=5 , FN=0 , TN=999495)
+        little-dirty-1000:  TP=454/455, (FP=11, FN=46, TN=999489)
+    Budget: 200
+        clean-1000:         TP=496/500, (FP=0 , FN=4 , TN=999500)
+        little-dirty-1000:  TP=454/455, (FP=11, FN=46, TN=999489)
+3) b)
+
+In Abetracht des teuren Labeling Budgets (Supervised decision tree classification of 7232 record pairs) und der
+guten Resultate des Active Learning Verfahren, ist dieses zu bevorzugen. Bereits mit einem Budget von 100 (1,38% gegenüber
+des vollständigen Labelns) konnte nahezu perfekte True-Positives Rates erreicht werden. Je nach Zufriedenheit kann auch das
+Budget erweitert werden.
+Auffällig ist allerdings auch, dass bei kleinerem Budget der Faktor Zufall eine entscheidende Rolle spielt.
+Daher ist es nur wenig verwunderlich, dass auch der Fall eintreten kann, in dem die Ergebnisse mit einem Budget von
+100 besser geworden sind als die Ergebnisse mit einem Budget von 200.
+
+
+3) c)
+
+Das Active Learning Verfahren benötigt mehr Rechenzeit. Auf meinem Rechner Betrug der Unterschied 180s/0.5s.
+Je nach Anzahl der Records und Budget, kann dies also ins Gewicht fallen. In vielen Fällen ist das Labeln der Daten
+der kostenintensivere Part, sodass Active Learning eine gute Alternative bildet, um daran zu sparen.
+
+In diesem Fall sollte für beide Datensätze das Active Learning eingesetzt werden. Beide Verfahren haben weniger als
+7 Minuten benötigt. Dafür haben sie allerdings ca. 7000 Trainingsrecords weniger labeln müssen.
+Die Ergebnisse haben bereits nach einem Budget von 100 sehr gute Resultate erbracht (clean: 500/0/0 vs 500/5/0 & little-dirty: 455/0/45 vs 454/11/46).
+

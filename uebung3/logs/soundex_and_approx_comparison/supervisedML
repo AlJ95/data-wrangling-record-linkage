@@ -1,0 +1,59 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 346 blocks from dataset A with 346 blocks from dataset B
+  Compared 7232 record pairs
+
+Supervised decision tree classification of 7232 record pairs
+  Number of training records and features: 7232 / 6
+  Number of positive and negative training records: 500 / 6732
+
+  Classifier 0 gets 2411 correct and 0 wrong
+  Classifier 1 gets 2411 correct and 0 wrong
+  Classifier 2 gets 2411 correct and 0 wrong
+
+  Classified 500 record pairs as matches and 6732 as non-matches
+
+Calculating confusion matrix using 500 classified matches, 6732 classified non-matches, and 500 true matches
+  TP=500, FP=0, FN=0, TN=999500
+
+Total runtime required for linkage: 1.198 sec
+Loading Time:		 0.023 sec
+Blocking Time:		 0.006 sec
+Comparison Time:	 0.625 sec
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 401 blocks from dataset A with 514 blocks from dataset B
+  Compared 4214 record pairs
+
+Supervised decision tree classification of 4214 record pairs
+  Number of training records and features: 4214 / 6
+  Number of positive and negative training records: 455 / 3759
+
+  Classifier 0 gets 1402 correct and 3 wrong
+  Classifier 1 gets 1403 correct and 2 wrong
+  Classifier 2 gets 1404 correct and 1 wrong
+
+  Classified 455 record pairs as matches and 3759 as non-matches
+
+Calculating confusion matrix using 455 classified matches, 3759 classified non-matches, and 500 true matches
+  TP=455, FP=0, FN=45, TN=999500
+
+Total runtime required for linkage: 0.604 sec
+Loading Time:		 0.023 sec
+Blocking Time:		 0.006 sec
+Comparison Time:	 0.382 sec
+
+Process finished with exit code 0

@@ -1,0 +1,75 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 346 blocks from dataset A with 346 blocks from dataset B
+  Compared 7232 record pairs
+
+  Number of training records and features: 7232 / 6
+  Number of positive and negative records: 500 / 6732
+
+0.15999999999999998
+0.16000000000000003
+0.15999999999999998
+0.0
+0.0
+0.0
+0.0
+0.15999999999999998
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+Calculating confusion matrix using 496 classified matches, 6736 classified non-matches, and 500 true matches
+  TP=496, FP=0, FN=4, TN=999500
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Run phonetic blocking:
+  List of blocking key attributes: [1]
+  Number of records to be blocked: 1000
+
+Compare 401 blocks from dataset A with 514 blocks from dataset B
+  Compared 4214 record pairs
+
+  Number of training records and features: 4214 / 6
+  Number of positive and negative records: 455 / 3759
+
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+Calculating confusion matrix using 465 classified matches, 3749 classified non-matches, and 500 true matches
+  TP=454, FP=11, FN=46, TN=999489
+
+
+Process finished with exit code 0

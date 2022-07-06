@@ -28,6 +28,6 @@ Zum Beispiel haben die Adressen das höchste Gewicht bei dieser Berechnung. Dabe
 Menschen a) umziehen und b) Adressen unterschiedlich schreiben zB. Eisenbahnstraße/ Eisenbahnstr.
 
 Wenn die gewählten Attribute allerdings alle die gleiche Wichtigkeit haben, dann ist die automatisierte Gewichtung vorteilhaft.
-Daher würde ich bevorzugen. Man könnte dabei einen hybriden Weg einschlagen:
+Man könnte dabei einen hybriden Weg einschlagen:
 Berechne Gewichte mittels automatisierter Gewichtung und multipliziere danach noch auf diese Gewichtsresultate eine vorher definierte
 Gewichtung, die berückstigt, dass zum Beispiel Straßennamen nicht so relevant sind, wie Namen.

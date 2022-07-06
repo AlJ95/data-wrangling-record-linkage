@@ -23,13 +23,24 @@ True-Positives/False-Positives/False-Negatives
                         simple threshold                                   min threshold                                weighted threshold
                     0.5                     0.7                     0.5                     0.7                     0.5                     0.7
 1,000
-clean               500/524/0               500/2/ 0                496/0/4                 496/0/4                 500/598/ 0              500/1/ 0
+clean               1024/500                502/500                 496/500                 496/500                 10500/598/ 0              500/1/ 0
 little-dirty        455/148/45              454/1/46                426/0/74                401/0/99                455/152/45              455/0/45
 
 10,000
 clean               5000/47149/  0          5000/169/  0            4955/0/ 45              4955/0/  45             5000/54158/  0          5000/192/  0
 little-dirty        4442/11039/558          4434/ 27/566            4171/0/819              3973/0/1027             4442/11961/558          4435/ 33/565
 
+Matches
+
+                        simple threshold                           min threshold                        weighted threshold
+                    0.5                     0.7             0.5                     0.7            0.5                     0.7
+1,000
+clean               1024                    502             496                     496            1098                     501
+little-dirty        603                     456             426                     401            602                      455
+
+10,000
+clean               52149                   5169            4955                    4955            59158                   5192
+little-dirty        15483                   4461            4171                    3973            16403                   4468
 
 1.) b)
 
