@@ -29,9 +29,8 @@ import loadDataset
 
 # ******** Uncomment to select a pair of datasets **************
 #
-best_res = (0, [1,1,1,1,1,1])
 for name in ["clean", "little-dirty"]:
-    for records in [1000, 10000]:
+    # for records in [1000, 10000]:
 # for name in ["little-dirty"]:
 #     for records in [1000]:
         # for comp_func in [
@@ -43,7 +42,7 @@ for name in ["clean", "little-dirty"]:
         # ]:
         # for sim_threshold in [0.5, 0.7]:
         # for _ in range(250):
-            sim_threshold = 0.7
+        #     sim_threshold = 0.7
             # print("\n\n\n\n\n")
             # print("#############################################")
             # print(f"Name:{name}\nRecords:{records}\nComparion Function:{comp_func.__name__}")
@@ -53,7 +52,7 @@ for name in ["clean", "little-dirty"]:
             # name = "little-dirty"
             # name = "clean"
 
-            # records = 1000
+            records = 1000
             # records = 10000
 
 
@@ -262,9 +261,13 @@ for name in ["clean", "little-dirty"]:
 
             # A supervised decision tree classifier
             #
-            class_al = classification_al.ActiveLearning()
+
             class_match_set, class_nonmatch_set = \
-                      class_al.active_learning(sim_vec_dict, true_match_set)
+                classification.supervisedMLClassify(sim_vec_dict, true_match_set)
+
+            # class_al = classification_al.ActiveLearning(budget=200)
+            # class_match_set, class_nonmatch_set = \
+            #           class_al.active_learning(sim_vec_dict, true_match_set)
 
             classification_time = time.time() - start_time
 
@@ -316,11 +319,11 @@ for name in ["clean", "little-dirty"]:
 
             linkage_time = loading_time + blocking_time + comparison_time + \
                            classification_time
-            # print('Total runtime required for linkage: %.3f sec' % linkage_time)
-            # print('Loading Time:\t\t %.3f sec' % loading_time)
-            # print('Blocking Time:\t\t %.3f sec' % blocking_time)
-            # print('Comparison Time:\t %.3f sec' % comparison_time)
-            # print('Linkage Time:\t\t %.3f sec' % linkage_time)
+            print('Total runtime required for linkage: %.3f sec' % linkage_time)
+            print('Loading Time:\t\t %.3f sec' % loading_time)
+            print('Blocking Time:\t\t %.3f sec' % blocking_time)
+            print('Comparison Time:\t %.3f sec' % comparison_time)
+            print('Classification Time:\t\t %.3f sec' % classification_time)
             # -----------------------------------------------------------------------------
 
             # End of program.
@@ -330,6 +333,3 @@ for name in ["clean", "little-dirty"]:
             # if res > best_res[0]:
             #     best_res = (res, linkage_result, weight_vec)
 
-print(best_res)
-
-#(0.91, array([1.16782445, 0.37154792, 2.74824586, 1.6841413 , 1.28609957, 0.67843916]))
