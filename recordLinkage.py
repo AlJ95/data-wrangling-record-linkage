@@ -292,11 +292,11 @@ for name in ["clean", "little-dirty"]:
             pc = evaluation.pairs_completeness(cand_rec_id_pair_list, true_match_set)
             pq = evaluation.pairs_quality(cand_rec_id_pair_list, true_match_set)
 
-            # print('Blocking evaluation:')
-            # print('  Reduction ratio:    %.3f' % rr)
-            # print('  Pairs completeness: %.3f' % pc)
-            # print('  Pairs quality:      %.3f' % pq)
-            # print('')
+            print('Blocking evaluation:')
+            print('  Reduction ratio:    %.3f' % rr)
+            print('  Pairs completeness: %.3f' % pc)
+            print('  Pairs quality:      %.3f' % pq)
+            print('')
 
             # Linkage evaluation
             #

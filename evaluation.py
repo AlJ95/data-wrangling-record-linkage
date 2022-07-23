@@ -120,9 +120,11 @@ def precision(confusion_matrix):
 
     # ************************ Implement precision here *************************
 
-    precision = 0.0  # Replace with your code
-
     # Add your code here
+    num_tp = confusion_matrix[0]
+    num_fp = confusion_matrix[1]
+
+    precision = float(num_tp) / (num_tp + num_fp)
 
     # ************ End of your precision code ***********************************
 
@@ -144,9 +146,10 @@ def recall(confusion_matrix):
 
     # ************************ Implement precision here *************************
 
-    recall = 0.0  # Replace with your code
+    num_tp = confusion_matrix[0]
+    num_fn = confusion_matrix[2]
 
-    # Add your code here
+    recall = float(num_tp) / (num_tp + num_fn)
 
     # ************ End of your recall code **************************************
 
@@ -169,9 +172,13 @@ def fmeasure(confusion_matrix):
     """
     # ************************ Implement precision here *************************
 
-    f_measure = 0.0  # Replace with your code
+    prec = precision(confusion_matrix)
+    rec = recall(confusion_matrix)
 
-    # Add your code here
+    if prec + rec == 0.:
+        return 0.
+
+    f_measure = 2 * prec * rec / (prec + rec)
 
     # ************ End of your f-measure code ***********************************
 
@@ -221,9 +228,8 @@ def pairs_completeness(cand_rec_id_pair_list, true_match_set):
 
     # ************************ Implement precision here *************************
 
-    pc = 0.0  # Replace with your code
-
-    # Add your code here
+    blocked_matches = {pair for pair in cand_rec_id_pair_list if pair in true_match_set}
+    pc = len(blocked_matches) / len(true_match_set)
 
     # ************ End of your pairs completeness code **************************
 
@@ -249,9 +255,8 @@ def pairs_quality(cand_rec_id_pair_list, true_match_set):
 
     # ************************ Implement precision here *************************
 
-    pq = 0.0  # Replace with your code
-
-    # Add your code here
+    blocked_matches = {pair for pair in cand_rec_id_pair_list if pair in true_match_set}
+    pq = len(blocked_matches) / len(cand_rec_id_pair_list)
 
     # ************ End of your pairs quality code *******************************
 
