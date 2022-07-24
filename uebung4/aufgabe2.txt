@@ -1,0 +1,61 @@
+2. a)
+
+Weighted similarity based classification of 1000000 record pairs
+  Weight vector: [1.0, 0.05, 2.0, 1.0, 1.0, 0.05]
+  Classification similarity threshold: 0.700
+
+Clean:
+    Blocking evaluation:
+      Reduction ratio:    0.000
+      Pairs completeness: 1.000
+      Pairs quality:      0.001
+
+    Calculating confusion matrix using 504 classified matches, 999496 classified non-matches, and 500 true matches
+      TP=500, FP=4, FN=0, TN=999496
+
+    Linkage evaluation:
+      Accuracy:    1.000
+      Precision:   0.992
+      Recall:      1.000
+      F-measure:   0.996
+
+Little-Dirty:
+    Blocking evaluation:
+      Reduction ratio:    0.000
+      Pairs completeness: 1.000
+      Pairs quality:      0.001
+
+    Calculating confusion matrix using 500 classified matches, 999500 classified non-matches, and 500 true matches
+      TP=500, FP=0, FN=0, TN=999500
+
+    Linkage evaluation:
+      Accuracy:    1.000
+      Precision:   1.000
+      Recall:      1.000
+      F-measure:   1.000
+
+    Total runtime required for linkage: 99.625 sec
+    Loading Time:		 0.046 sec
+    Blocking Time:		 0.000 sec
+    Comparison Time:	 98.483 sec
+    Classification Time:		 1.096 sec
+
+2. b)
+
+Die drei Maße zur Gütebestimmung vom Blocking sind offensichtlich in diesem Szenario nicht nützlich, da sie durch fehlendes Blocking
+die bestmöglichen (Pairs Completeness) bzw. die schlechtesten (Reduction ratio & Pairs quality) Werte ausgibt.
+
+Accuracy ist in Record Linkage ein relativ unbedeutender Wert. Das liegt daran, dass die Match/ Non-Match Resultate in
+ der Regel sehr inbalanciert sind. Es sollte sehr viel mehr Non-Matches existieren (Ausnahme SLK Blocking).
+Daraus ergibt sich allerdings ein oftmals sehr hoher Wert als Accuracy, da die meisten Non-Matches bei genügend Informationen
+ in den Records auch als Non-Matches gewertet werden sollten.
+
+2. c)
+
+Es ist anzunehmen, dass die Resultate des Record-Linkage Algorithmus schlechter ausfallen, wenn der Korruptionsgrad entsprechend
+anwächst. Dies ist in meinem Durchlauf mit weighted based classification ([1.0, 0.05, 2.0, 1.0, 1.0, 0.05], sim threshold: 0.7) nicht passiert.
+Der Little-Dirty-Datensatz hat eine perfekte Confusionmatrix und der Clean-Datensatz hat 4 False-Positives.
+Dies ist jedoch mit den 4 sehr ähnlichen Records und der Tatsache, dass das Geburtsdatum keine passende Ähnlichkeitsfunktion hatte, erklärbar.
+
+
+

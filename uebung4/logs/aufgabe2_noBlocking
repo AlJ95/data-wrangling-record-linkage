@@ -1,0 +1,86 @@
+C:\Users\janal\anaconda3\envs\big-data-and-language-technologies\python.exe "C:/Users/janal/OneDrive/Dokumente/Studium/Master/1 - Data Wrangling - Aktuelle Trends in Data Science/Übung/Blocking/recordLinkage.py"
+
+Clean 1000:
+
+Run 'no' blocking:
+  Number of records to be blocked: 1000
+
+Run 'no' blocking:
+  Number of records to be blocked: 1000
+
+Compare 1 blocks from dataset A with 1 blocks from dataset B
+  Compared 1000000 record pairs
+
+Weighted similarity based classification of 1000000 record pairs
+  Weight vector: [1.0, 0.05, 2.0, 1.0, 1.0, 0.05]
+  Classification similarity threshold: 0.700
+  Classified 504 record pairs as matches and 999496 as non-matches
+
+Blocking evaluation:
+  Reduction ratio:    0.000
+  Pairs completeness: 1.000
+  Pairs quality:      0.001
+
+Calculating confusion matrix using 504 classified matches, 999496 classified non-matches, and 500 true matches
+  TP=500, FP=4, FN=0, TN=999496
+
+Linkage evaluation:
+  Accuracy:    1.000
+  Precision:   0.992
+  Recall:      1.000
+  F-measure:   0.996
+
+Total runtime required for linkage: 98.841 sec
+Loading Time:		 0.009 sec
+Blocking Time:		 0.000 sec
+Comparison Time:	 97.760 sec
+Classification Time:		 1.072 sec
+Finished.
+
+ __________________________________________________________
+__________________________________________________________
+
+Little-dirty 1000:
+
+Run 'no' blocking:
+  Number of records to be blocked: 1000
+
+Run 'no' blocking:
+  Number of records to be blocked: 1000
+
+Compare 1 blocks from dataset A with 1 blocks from dataset B
+  Compared 1000000 record pairs
+
+Weighted similarity based classification of 1000000 record pairs
+  Weight vector: [1.0, 0.05, 2.0, 1.0, 1.0, 0.05]
+  Classification similarity threshold: 0.700
+  Classified 500 record pairs as matches and 999500 as non-matches
+
+Blocking evaluation:
+  Reduction ratio:    0.000
+  Pairs completeness: 1.000
+  Pairs quality:      0.001
+
+Calculating confusion matrix using 500 classified matches, 999500 classified non-matches, and 500 true matches
+  TP=500, FP=0, FN=0, TN=999500
+
+Linkage evaluation:
+  Accuracy:    1.000
+  Precision:   1.000
+  Recall:      1.000
+  F-measure:   1.000
+
+Total runtime required for linkage: 99.625 sec
+Loading Time:		 0.046 sec
+Blocking Time:		 0.000 sec
+Comparison Time:	 98.483 sec
+Classification Time:		 1.096 sec
+Finished.
+
+ __________________________________________________________
+__________________________________________________________
+
+
+
+
+Process finished with exit code 0

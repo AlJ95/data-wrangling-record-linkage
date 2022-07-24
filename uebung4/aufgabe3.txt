@@ -1,0 +1,32 @@
+Very-Dirty
+    - SLK nicht geeignet für verschmutzte Daten (pc ~ 0.3)
+    - Auch Phonetisch schwierig (pc~0.63)
+
+
+
+3. a)
+Ein Gewinner über alle Datensätze kann nicht ermittelt werden.
+Die besten Resultate bzgl einer gleichmäßigen Fokussierung auf Precision und Recall sind jedoch weighted und Threshold Classification für eine hohe Anzahl von Records. (SupervisedML ist für große Datensätze mit meiner Hardware nicht möglich und hat auch nach 15 Minuten keine Resultate erbringen können. MinThreshold wäre nur zu bevorzugen, wenn eine perfekte Precision gewollt wäre und der Recallwert vernachlässigbar wäre. Dies ist im Kontext von Record-Linkage jedoch nicht sinnvoll.
+Weiterhin wäre für die besten Resultate das PhoneticBlocking zu bevorzugen, da mit Anstieg des Korruptionsgrades der Daten auch die Pair-Completeness sinkt. Dieser Effekt ist stärker bei SLK-Blocking. Dice-Comparison bietet eine gute Balance zwischen Performance und Qualität sowie eine gute Balance in Recall und Precision.
+
+3. b)
+Es gibt mehrere Tradeoffs.
+- Jaccard ist Precision-Favored. Es erreicht erhöhte Precision, wobei es mit höheren Korruptionsgrad der Daten im Recall einbüßt.
+- Höhere Thresholds erhöhen bis zu einem bestimmten Grad auch die Precision und verkleinern den Recall. (& vice versa)
+- Die Resultate von SupervisedML Classification hatten mit sauberen Daten sehr gute Qualität, jedoch waren sie sehr viel schlechter mit erhöhtem Korruptionsgrad.
+
+3. c)
+SLK-Blocking Funktionen sind sehr performant durch geringe Blöcke. Reduzieren jedoch die Pair-Completness und damit auch die True-Positives bei hohen Korruptionsgrad. Phonetisches Blocking ist sehr laufzeitintensiv und damit ungeeignet für sehr große Datensätze.
+
+3. d)
+
+Die Comparisonfunktionen haben alle einen ähnlichen mittleren Recall. Jedoch hat die Jaro-Winkler-Funktion, Bag-Distance-Funktion & Approx_Func_List, die bereits implementiert war eine schlechtere mittlere precision. Damit würde ich diese hier nennen.
+Die restlichen Settings hatten keine klaren Schwachstellen.
+
+3. e)
+
+Der Verschmutzungsgrad eines Datensatzes sollte das erste Ziel einer Datenexploration sein. Damit könnten Settings ausgeschlossen werden (bspw. SupervisedML, Jaccard, SLKBlocking)
+Der Wert Similarity-Threshold sollte innerhalb eines Intervalls getestet werden. 0.5 & 0.7 waren interessante Werte. Jedoch können diese für andere Datensätze und Werte unterschiedlich sein.
+Es sollten andere Ähnlichkeitsfunktionen zum Einsatz kommen. Die hier implementierten Ähnlichkeitsfunktionen haben ähnliche Fokussierung auf Attribute mit hoher Varianz (Namen, Adresse, ...), jedoch keine Fokussierung auf Typos in Geburtsdaten. (Hohe Ähnlichkeit von 17.02.1996 und 27.12.1995, da viele Ziffern übereinstimmen, obwohl es ganz verschieden Daten sind mit geringer Wahrscheinlichkeit eines mehrfachen Typos)
+
+

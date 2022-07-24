@@ -1,0 +1,243 @@
+clean:
+                                                                                                                                                                 Unnamed: 0  ...  classification_time
+blocking_func    comp_func                                          classification_func        sim_threshold weights                                                         ...
+phoneticBlocking jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.680000
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.755475
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.686000
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.009002
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010000
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.012019
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.685000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.745000
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.771006
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010001
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.756023
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.683000
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.762000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010000
+                                                                                               0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.739045
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010000
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.009998
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010001
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010031
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.774521
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010000
+slkBlocking      jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.421036
+phoneticBlocking jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.782527
+slkBlocking      jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.424999
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.437000
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.042000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.439999
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.458001
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.513999
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.441287
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.436038
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.443959
+                                                                                                             [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.045000
+                                                                                                             [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.003001
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.039000
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.047001
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.443044
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002999
+                                                                                               0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+                                                                                               0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.040003
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.003998
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+phoneticBlocking dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010001
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.010000
+slkBlocking      bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.044261
+                                                                                                             [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+                                                                                               0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.036000
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.044002
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.039000
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.003998
+                                                                                               0.7           [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.501001
+                                                                                                             [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.040999
+                                                                                                             [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+                                                                                               0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.041999
+                                                                                                             [13.900017692083498, 0.7170307559256881, 29.918...         0.0  ...             0.432000
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [11.65508344519798, 0.5998413264010329, 25.3115...         0.0  ...             0.042000
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [9.544964432789238, 0.4807354922057604, 20.1881...         0.0  ...             0.002000
+[60 rows x 19 columns]
+------------------------------------------------------
+little-dirty:
+                                                                                                                                                                 Unnamed: 0  ...  classification_time
+blocking_func    comp_func                                          classification_func        sim_threshold weights                                                         ...
+phoneticBlocking jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.437001
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.471296
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.480998
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.006999
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.006000
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.457003
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.006001
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.448087
+slkBlocking      jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.437037
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.442191
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.441038
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.437999
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.434999
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.438999
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.440178
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.420038
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.438196
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.437997
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.043000
+                                                                                               0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002000
+                                                                                                             [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.041001
+                                                                                                             [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.443001
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002000
+                                                                                                             [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.039042
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.001999
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002001
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002001
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002002
+                                                                                                             [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.046999
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.044998
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002000
+                                                                                                             [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.042000
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.042001
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [15.444691393399546, 0.778785825012205, 32.3551...         0.0  ...             0.440874
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002001
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.001000
+                                                                                               0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.038000
+                                                                                                             [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002001
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.044000
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.043000
+                                                                                                             [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.002000
+                                                                                               0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.047001
+                                                                                                             [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.001997
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.039999
+phoneticBlocking jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.007002
+                                                                                                             [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.489003
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.008002
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.476036
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.460526
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.484039
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.635000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.007000
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.472000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.7           [12.9762060901486, 0.6480182004438917, 26.88147...         0.0  ...             0.477045
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.006999
+                                                                                               0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.007000
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.008000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.006000
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.007000
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [10.256208688527387, 0.5088709768994618, 20.971...         0.0  ...             0.007000
+[60 rows x 19 columns]
+------------------------------------------------------
+very-dirty:
+                                                                                                                                                                 Unnamed: 0  ...  classification_time
+blocking_func    comp_func                                          classification_func        sim_threshold weights                                                         ...
+phoneticBlocking jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.466011
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.472547
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.445021
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007000
+slkBlocking      jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.407993
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.419518
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.409000
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.415001
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.407563
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.419734
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.404681
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.421000
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.406016
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.001999
+                                                                                               0.7           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.403764
+                                                                                                             [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.040000
+                                                                                                             [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.002001
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.002003
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.041999
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.403009
+                                                                                                             [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.037000
+                                                                                                             [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.001002
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.039040
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.035734
+                                                                                                             [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.001999
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.039009
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.001999
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.039000
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.002000
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.038002
+                                                                                                             [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.002002
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.036000
+                                                                                               0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.002001
+                                                                                                             [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.038999
+                                                                                                             [15.592369435735408, 0.7868927338419366, 32.688...         0.0  ...             0.404180
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.001002
+                                                                                                             [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.036000
+                                                                                               0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.001000
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.002000
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.040045
+phoneticBlocking jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007001
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.475999
+                                                                                                             [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007999
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.444612
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.006999
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.473068
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.486692
+                                                                                               0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.471003
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.454013
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.478066
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.469079
+                 jaro_winkler_comp,jaro_winkler_comp,jaro_winkle... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007001
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.7           [13.135067945777816, 0.6566249864814255, 27.238...         0.0  ...             0.493001
+                                                                                               0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007998
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.006999
+                 jaccard_comp,jaccard_comp,jaccard_comp,jaccard_... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.006000
+                 dice_comp,dice_comp,dice_comp,dice_comp,dice_co... weightedSimilarityClassify 0.5           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.006000
+                 edit_dist_sim_comp,edit_dist_sim_comp,edit_dist... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007003
+                 bag_dist_sim_comp,bag_dist_sim_comp,bag_dist_si... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007999
+                 jaccard_comp,dice_comp,jaro_winkler_comp,bag_di... weightedSimilarityClassify 0.7           [10.442943495848729, 0.5178776002309042, 21.355...         0.0  ...             0.007001
+[60 rows x 19 columns]
+------------------------------------------------------
+clean:
+Empty DataFrame
+Columns: [Unnamed: 0, records, reducation_ratio, pairs_completeness, pairs_quality, TP, FP, FN, TN, accuracy, precision, recall, effective_recall, f_measure, effective_f_measure, loading_time, blocking_time, comparison_time, classification_time]
+Index: []
+------------------------------------------------------
+little-dirty:
+Empty DataFrame
+Columns: [Unnamed: 0, records, reducation_ratio, pairs_completeness, pairs_quality, TP, FP, FN, TN, accuracy, precision, recall, effective_recall, f_measure, effective_f_measure, loading_time, blocking_time, comparison_time, classification_time]
+Index: []
+------------------------------------------------------
+very-dirty:
+Empty DataFrame
+Columns: [Unnamed: 0, records, reducation_ratio, pairs_completeness, pairs_quality, TP, FP, FN, TN, accuracy, precision, recall, effective_recall, f_measure, effective_f_measure, loading_time, blocking_time, comparison_time, classification_time]
+Index: []
+------------------------------------------------------
+Blocking
+         dataset  records     blocking_func  blocking_time
+11    very-dirty     1000       slkBlocking       0.002667
+1          clean     1000       slkBlocking       0.002778
+6   little-dirty     1000       slkBlocking       0.003361
+0          clean     1000  phoneticBlocking       0.005778
+5   little-dirty     1000  phoneticBlocking       0.006722
+10    very-dirty     1000  phoneticBlocking       0.006724
+8   little-dirty    10000       slkBlocking       0.036806
+3          clean    10000       slkBlocking       0.037751
+13    very-dirty    10000       slkBlocking       0.041637
+2          clean    10000  phoneticBlocking       0.061511
+7   little-dirty    10000  phoneticBlocking       0.066776
+12    very-dirty    10000  phoneticBlocking       0.068917
+4          clean   100000       slkBlocking       0.664254
+9   little-dirty   100000       slkBlocking       0.671131
+14    very-dirty   100000       slkBlocking       0.716393
+Comparison
+         dataset  ...  comparison_time
+18  little-dirty  ...         0.036417
+36    very-dirty  ...         0.038836
+0          clean  ...         0.061834
+37    very-dirty  ...         0.064992
+19  little-dirty  ...         0.065001
+22  little-dirty  ...         0.069083
+40    very-dirty  ...         0.070780
+52    very-dirty  ...         0.094013
+48    very-dirty  ...         0.099957
+49    very-dirty  ...         0.101081
+51    very-dirty  ...         0.101757
+1          clean  ...         0.105428
+4          clean  ...         0.114919
+23  little-dirty  ...         0.121685
